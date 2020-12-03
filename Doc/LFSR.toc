@@ -8,3 +8,4 @@
 \contentsline {subsection}{\numberline {1.4.2}Galois LFSR}{4}{}%
 \contentsline {subsection}{\numberline {1.4.3}Comparison}{4}{}%
 \contentsline {chapter}{\numberline {2}Architecture Description}{6}{}%
+\contentsline {section}{\numberline {2.1}D Flip-Flop with tap circuit}{6}{}%

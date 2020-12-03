@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  30 NOV 2020 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  3 DEC 2020 21:30
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -141,29 +141,37 @@ Package caption Info: Standard document class detected.
 \c@lotdepth=\count197
 \sf@top=\skip52
 \sf@bottom=\skip53
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count198
+\FV@InFile=\read3
+\FV@TabBox=\box47
+\c@FancyVerbLine=\count199
+\FV@StepNumber=\count266
+\FV@OutFile=\write3
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count198
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count267
+\l__pdf_internal_box=\box48
 ) (LFSR.aux)
 \openout1 = `LFSR.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -204,16 +212,16 @@ LaTeX Font Info:    ... okay on input line 10.
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count199
+\scratchcounter=\count268
 \scratchdimen=\dimen158
-\scratchbox=\box48
-\nofMPsegments=\count266
-\nofMParguments=\count267
+\scratchbox=\box49
+\nofMPsegments=\count269
+\nofMParguments=\count270
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count268
+\MPscratchCnt=\count271
 \MPscratchDim=\dimen159
-\MPnumerator=\count269
-\makeMPintoPDFobject=\count270
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
 \everyMPtoPDFconversion=\toks20
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -226,11 +234,11 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 16.
  [1
 
 {C:/Users/franc/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
@@ -240,8 +248,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
-\tf@toc=\write3
-\openout3 = `LFSR.toc'.
+\tf@toc=\write4
+\openout4 = `LFSR.toc'.
 
  [1
 
@@ -253,68 +261,86 @@ Chapter 1.
 <img/LFSR-functionality.png, id=32, 599.23875pt x 204.765pt>
 File: img/LFSR-functionality.png Graphic file (type png)
 <use img/LFSR-functionality.png>
-Package pdftex.def Info: img/LFSR-functionality.png  used on input line 44.
+Package pdftex.def Info: img/LFSR-functionality.png  used on input line 45.
 (pdftex.def)             Requested size: 299.61864pt x 102.38223pt.
  [3 <./img/LFSR-functionality.png>]
 <img/architectures.png, id=38, 310.15875pt x 180.675pt>
 File: img/architectures.png Graphic file (type png)
 <use img/architectures.png>
-Package pdftex.def Info: img/architectures.png  used on input line 79.
+Package pdftex.def Info: img/architectures.png  used on input line 80.
 (pdftex.def)             Requested size: 279.14029pt x 162.60599pt.
  [4 <./img/architectures.png>]
 <img/XOR chain.png, id=44, 417.56pt x 236.885pt>
 File: img/XOR chain.png Graphic file (type png)
 <use img/XOR chain.png>
-Package pdftex.def Info: img/XOR chain.png  used on input line 99.
+Package pdftex.def Info: img/XOR chain.png  used on input line 100.
 (pdftex.def)             Requested size: 208.77948pt x 118.4422pt.
 <img/XORtp.png, id=45, 424.58624pt x 162.6075pt>
 File: img/XORtp.png Graphic file (type png)
 <use img/XORtp.png>
-Package pdftex.def Info: img/XORtp.png  used on input line 105.
+Package pdftex.def Info: img/XORtp.png  used on input line 106.
 (pdftex.def)             Requested size: 212.2926pt x 81.30354pt.
  [5 <./img/XOR chain.png> <./img/XORtp.png>]
 Chapter 2.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+24.
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<img/XORtruthTable.png, id=53, 162.6075pt x 202.7575pt>
+File: img/XORtruthTable.png Graphic file (type png)
+<use img/XORtruthTable.png>
+Package pdftex.def Info: img/XORtruthTable.png  used on input line 140.
+(pdftex.def)             Requested size: 97.56525pt x 121.65543pt.
+<img/ANDtruthTable.png, id=54, 162.6075pt x 202.7575pt>
+File: img/ANDtruthTable.png Graphic file (type png)
+<use img/ANDtruthTable.png>
+Package pdftex.def Info: img/ANDtruthTable.png  used on input line 147.
+(pdftex.def)             Requested size: 97.56525pt x 121.65543pt.
+
 [6
 
-] (LFSR.aux) ) 
+ <./img/XORtruthTable.png>] [7 <./img/ANDtruthTable.png>] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 4142 strings out of 479832
- 66336 string characters out of 2871058
- 362551 words of memory out of 3000000
- 21073 multiletter control sequences out of 15000+200000
- 549629 words of font info for 54 fonts, out of 3000000 for 9000
+ 4553 strings out of 479832
+ 73227 string characters out of 2871058
+ 370000 words of memory out of 3000000
+ 21474 multiletter control sequences out of 15000+200000
+ 549942 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,76p,699b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecbx1200.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\franc\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\franc\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\franc\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\franc\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\franc\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\
-franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\
-Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk
-> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
-200.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1440.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecrm2488.pk><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/franc/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/franc/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/franc/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/franc/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/f
-ranc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/
-Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (7 pages, 225347 bytes).
+ <C:\User
+s\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C
+:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.
+pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
+m0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecrm0600.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\tcrm1000.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecti1000.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\franc\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\franc\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\franc\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\franc\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\franc
+\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users
+\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:
+\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.p
+k><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/franc/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/franc/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/franc/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fran
+c/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb>
+Output written on LFSR.pdf (8 pages, 246980 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
+ 441 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

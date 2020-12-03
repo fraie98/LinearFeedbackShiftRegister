@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{fancyvrb}
 \geometry{a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,%
 	heightrounded,bindingoffset=5mm}
 \begin{document}
@@ -115,5 +116,41 @@ In our case we have four taps, so if we assume that we have only XOR gates with 
 \noindent Indeed, theoretically speaking, the difference in performance between the two implementations exists, and so in the following report it will be treaten the implementation in VHDL of an LFSR with Galois architecture and then its testing and its practical realization obtained by programming the ZyBo Board with Xilinx Vivado. 
 
 \chapter{Architecture Description}
-.
+As we discussed in the previous chapter, we will implement a Galois LFSR. Let's see the necessary devices to implement it.
+In order to implement a memory element I need a D Flip-Flop with set and reset. In fact we need to initialize each memory element to the seed value, so the i-th flip flop will be initialize with the i-th bit of the seed.
+The aim of the implementation is to have a functional LFSR, but another aim is also having a customizable LFSR. In order to do this we have to add a circuit to change (or not) the input of a simple flip-flop, we call this circuit \emph{tap circuit}.
+\section{D Flip-Flop with tap circuit}
+Assume that we have the i-th flip-flop and the j-th (with $j = i +1$). If $i$ is a tap then its output must be XORed with the $N-1$ bit, otherwise the output of $i$ goes unchanged to the input of $j$. So we have to implement the following logic function (described using a pseudo-code and assuming that $feedback$ is the $N-1$ bit):
+\begin{Verbatim}
+	void logicFunctionOmega(isTap_i, feedback)
+	{
+		if(isTap_i==true)
+			input_j = xor(output_i,feedback);
+		else
+			input_j = output_i;
+	}
+\end{Verbatim}
+Now we have to translate this logic function from this pseudo-code to logic gates.
+But, before doing this, we need to point out some concepts:
+\begin{itemize}
+	\item $isTap_i$, $feedback$ and $output_i$ are bits. We will use the following convention: $isTap_i$ is true if it is 1, it is false when it is 0.
+	\item We know that the neutral element for the XOR is the 0 (if A and B are the inputs of XOR, if B is 0 then A passes the gate unchanged), in fact the truth table for the XOR is:
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[scale=0.6]{img/XORtruthTable.png}
+		\caption{XOR Truth Table}
+	\end{figure} 
+\end{itemize} 
+After fixed this points we can implement our unknown function, let's call it $\Omega$ and let see what is the expected truth table (in the image A is $isTap_i$ and B is $feedback$):
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.6]{img/ANDtruthTable.png}
+	\caption{$\Omega$ Truth Table.}
+\end{figure}
+
+\noindent Remember that the output must be equal to B ($feedback$) if A($tap_i$) is equal to 1, otherwise it must be equal to the neutral element of the xor, so 0.
+
+\noindent We can easily recognize that the "mysterious" logic function $\Omega$ is indeed the AND gate.
+So the logic block diagram of a flip-flop with the tap circuit is the following:
+
 \end{document}

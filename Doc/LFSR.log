@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  3 DEC 2020 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  6 DEC 2020 21:14
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -158,20 +158,20 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 ) (LFSR.aux)
 \openout1 = `LFSR.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -234,11 +234,11 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 16.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 17.
  [1
 
 {C:/Users/franc/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
@@ -261,51 +261,57 @@ Chapter 1.
 <img/LFSR-functionality.png, id=32, 599.23875pt x 204.765pt>
 File: img/LFSR-functionality.png Graphic file (type png)
 <use img/LFSR-functionality.png>
-Package pdftex.def Info: img/LFSR-functionality.png  used on input line 45.
+Package pdftex.def Info: img/LFSR-functionality.png  used on input line 46.
 (pdftex.def)             Requested size: 299.61864pt x 102.38223pt.
  [3 <./img/LFSR-functionality.png>]
 <img/architectures.png, id=38, 310.15875pt x 180.675pt>
 File: img/architectures.png Graphic file (type png)
 <use img/architectures.png>
-Package pdftex.def Info: img/architectures.png  used on input line 80.
+Package pdftex.def Info: img/architectures.png  used on input line 81.
 (pdftex.def)             Requested size: 279.14029pt x 162.60599pt.
  [4 <./img/architectures.png>]
 <img/XOR chain.png, id=44, 417.56pt x 236.885pt>
 File: img/XOR chain.png Graphic file (type png)
 <use img/XOR chain.png>
-Package pdftex.def Info: img/XOR chain.png  used on input line 100.
+Package pdftex.def Info: img/XOR chain.png  used on input line 101.
 (pdftex.def)             Requested size: 208.77948pt x 118.4422pt.
 <img/XORtp.png, id=45, 424.58624pt x 162.6075pt>
 File: img/XORtp.png Graphic file (type png)
 <use img/XORtp.png>
-Package pdftex.def Info: img/XORtp.png  used on input line 106.
+Package pdftex.def Info: img/XORtp.png  used on input line 107.
 (pdftex.def)             Requested size: 212.2926pt x 81.30354pt.
  [5 <./img/XOR chain.png> <./img/XORtp.png>]
 Chapter 2.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-24.
+25.
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 <img/XORtruthTable.png, id=53, 162.6075pt x 202.7575pt>
 File: img/XORtruthTable.png Graphic file (type png)
 <use img/XORtruthTable.png>
-Package pdftex.def Info: img/XORtruthTable.png  used on input line 140.
+Package pdftex.def Info: img/XORtruthTable.png  used on input line 141.
 (pdftex.def)             Requested size: 97.56525pt x 121.65543pt.
 <img/ANDtruthTable.png, id=54, 162.6075pt x 202.7575pt>
 File: img/ANDtruthTable.png Graphic file (type png)
 <use img/ANDtruthTable.png>
-Package pdftex.def Info: img/ANDtruthTable.png  used on input line 147.
+Package pdftex.def Info: img/ANDtruthTable.png  used on input line 148.
 (pdftex.def)             Requested size: 97.56525pt x 121.65543pt.
 
 [6
 
- <./img/XORtruthTable.png>] [7 <./img/ANDtruthTable.png>] (LFSR.aux) ) 
+ <./img/XORtruthTable.png>]
+<img/FF_tap_circuit.png, id=61, 666.49pt x 343.2825pt>
+File: img/FF_tap_circuit.png Graphic file (type png)
+<use img/FF_tap_circuit.png>
+Package pdftex.def Info: img/FF_tap_circuit.png  used on input line 158.
+(pdftex.def)             Requested size: 399.89708pt x 205.97107pt.
+ [7 <./img/ANDtruthTable.png> <./img/FF_tap_circuit.png>] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 4553 strings out of 479832
- 73227 string characters out of 2871058
+ 4559 strings out of 479832
+ 73374 string characters out of 2871058
  370000 words of memory out of 3000000
- 21474 multiletter control sequences out of 15000+200000
+ 21479 multiletter control sequences out of 15000+200000
  549942 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,76p,699b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -338,9 +344,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fran
 c/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
 sers/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb>
-Output written on LFSR.pdf (8 pages, 246980 bytes).
+Output written on LFSR.pdf (8 pages, 259902 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
+ 443 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

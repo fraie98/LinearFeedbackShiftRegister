@@ -10,7 +10,7 @@ entity DFF_tap_circuit is
 			d_in		:	in 	std_logic;	
 			isTap		:	in 	std_logic;	-- it indicates if the input must be changed (it does if the previous ff is a tap)
 			feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
-			q_out		:	out std_logic)
+			q_out		:	out std_logic
 		);
 	end DFF_tap_circuit;
 
@@ -22,18 +22,18 @@ component dff is
 			reset 	:	in 	std_logic;
 			set		: 	in 	std_logic;
 			d 		:	in 	std_logic;
-			q 		:	out std_logic)
+			q 		:	out std_logic
 		);
 	end component;
 
-	signal new_d std_logic;
+	signal new_d : std_logic;
 begin
 	internal_dff:DFF
 		port map(
-				clk 	=> clock;
-				reset 	=> reset;
-				set 	=> set;
-				d 		=> new_d;
+				clk 	=> clk,
+				reset 	=> reset,
+				set 	=> set,
+				d 		=> new_d,
 				q 		=> q_out
 			);
 

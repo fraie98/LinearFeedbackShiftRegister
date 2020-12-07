@@ -7,6 +7,28 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{fancyvrb}
+
+\usepackage{color}
+\usepackage{listings}
+\lstset{ %
+	language=C++,                % choose the language of the code
+	basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,           % adds a frame around the code
+	tabsize=2,          % sets default tabsize to 2 spaces
+	captionpos=b,           % sets the caption-position to bottom
+	breaklines=true,        % sets automatic line breaking
+	breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+	escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
 \geometry{a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,%
 	heightrounded,bindingoffset=5mm}
 \begin{document}
@@ -122,15 +144,15 @@ In order to implement a memory element I need a D Flip-Flop with set and reset. 
 The aim of the implementation is to have a functional LFSR, but another aim is also having a customizable LFSR. In order to do this we have to add a circuit to change (or not) the input of a simple flip-flop, we call this circuit \emph{tap circuit}.
 \section{D Flip-Flop with tap circuit}
 Assume that we have the i-th flip-flop and the j-th (with $j = i +1$). If $i$ is a tap then its output must be XORed with the $N-1$ bit, otherwise the output of $i$ goes unchanged to the input of $j$. So we have to implement the following logic function (described using a pseudo-code and assuming that $feedback$ is the $N-1$ bit):
-\begin{Verbatim}
-	void logicFunctionOmega(isTap_i, feedback)
-	{
-		if(isTap_i==true)
-			input_j = xor(output_i,feedback);
-		else
-			input_j = output_i;
-	}
-\end{Verbatim}
+\begin{lstlisting}
+void logicFunctionOmega(isTap_i, feedback)
+{
+	if(isTap_i==true)
+		input_j = xor(output_i,feedback);
+	else
+		input_j = output_i;
+}
+\end{lstlisting}
 Now we have to translate this logic function from this pseudo-code to logic gates.
 But, before doing this, we need to point out some concepts:
 \begin{itemize}
@@ -159,5 +181,74 @@ So the logic block diagram of a flip-flop with the tap circuit is the following:
 	\caption{Logic block diagram of a D Flip-Flop with set/reset and tap circuit.}
 \end{figure}
 
+\section{LFSR Implementation}
+Once we have the D Flip-Flop with the tap circuit if we want to implement a LFSR with a length of N, we need N D Flip-Flop with tap circuit.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.19]{img/LFSR_logic_block.png}
+	\caption{Implementation of a LFSR (length of 4) with D Flip-Flop with tap circuit. (For simplicity we neglect the links for clock and set/reset)}
+\end{figure}
+
+\noindent It' important to do some observations about this implementation.
+\begin{itemize}
+	\item The first flip flop (the $0^{th}$) is a particular one. Its input port "isTap" must be linked to the ground (it must be always 0) because doesn't exist a flip flop before the zero one.
+	\item The initialization of the flip-flops is ensured by the basic D Flip-Flop linking the set port of the $i^{th}$ flip-flop to $seed[i]$ (this is not shown in figure 2.4)
+\end{itemize}
+
+\section{Input/Output and Overall}
+Abstracting from the internal details it's possible to describe the LFSR as in the image 2.5.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.5]{img/LFSR-overall.png}
+	\caption{Logic block diagram of a LFSR with a length of N.}
+\end{figure}
+
+\noindent Let's analyse the input/output ports:
+\begin{itemize}
+	\item \emph{seed[N-1:0]}: it contains the initialization value of the LFSR (the so-called seed). As we said previously the $i-th$ set port of the flip-flop will be connected to $seed[i]$.
+	\item \emph{isTap[N-2:0]}: it indicates which are the taps. Its length is N-1 because there is no flip-flop before the $0^{th}$ flip-flop and so its isTap port will be connected to the ground (zero).
+	\item \emph{reset}: the reset in common for all flip-flops.
+	\item \emph{clock}: the clock in common for all flip-flops.
+	\item \emph{outputBit}: the bit that is the result of the LFSR's algorithm.
+\end{itemize} 
+Let's sum up the operations done by the LFSR.
+\chapter{VHDL Code}
+\section{D Flip-Flop with Set/Reset}
+\lstset{ %
+	language=VHDL}
+\begin{lstlisting}
+-- D Flip-Flop with Set/Reset
+	library ieee;
+	use ieee.std_logic_1164.all;
+
+	entity DFF is
+		port(
+			clk		:	in 	std_logic;
+			reset 	:	in 	std_logic;
+			set 	:	in 	std_logic;
+			d 		:	in 	std_logic;
+			q 		:	out std_logic
+		);
+	end DFF;
+
+	architecture rtl of DFF is
+	begin
+		dff_p:process(reset,clk)
+		begin
+			if reset='0' then
+				q <= set;
+			elsif(rising_edge(clk)) then
+				q <= d;
+			end if;
+		end process;
+	end rtl;
+\end{lstlisting}
+\chapter{Test-Plan}
+Notes for test plan:
+\begin{itemize}
+	\item test del solo dff con tap circuit
+	\item test con solo due dff per testare il reset
+	\item test completo con programm in C
+\end{itemize}
 
 \end{document}

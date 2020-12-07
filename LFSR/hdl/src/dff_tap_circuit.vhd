@@ -28,7 +28,7 @@ component dff is
 
 	signal new_d : std_logic;
 begin
-	internal_dff:DFF
+	internal_dff : dff
 		port map(
 				clk 	=> clk,
 				reset 	=> reset,

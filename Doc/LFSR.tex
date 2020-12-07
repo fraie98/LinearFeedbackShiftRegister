@@ -35,7 +35,7 @@
 
 \title{\Huge{Linear Feedback Shift Register}}
 \author{\Large{Francesco Iemma}}
-\date{Accademic Year 2020/21}
+\date{Academic Year 2020/21}
 \maketitle
 \tableofcontents
 
@@ -145,13 +145,13 @@ The aim of the implementation is to have a functional LFSR, but another aim is a
 \section{D Flip-Flop with tap circuit}
 Assume that we have the i-th flip-flop and the j-th (with $j = i +1$). If $i$ is a tap then its output must be XORed with the $N-1$ bit, otherwise the output of $i$ goes unchanged to the input of $j$. So we have to implement the following logic function (described using a pseudo-code and assuming that $feedback$ is the $N-1$ bit):
 \begin{lstlisting}
-void logicFunctionOmega(isTap_i, feedback)
-{
-	if(isTap_i==true)
-		input_j = xor(output_i,feedback);
-	else
-		input_j = output_i;
-}
+	void logicFunctionOmega(isTap_i, feedback)
+	{
+		if(isTap_i==true)
+			input_j = xor(output_i,feedback);
+		else
+			input_j = output_i;
+	}
 \end{lstlisting}
 Now we have to translate this logic function from this pseudo-code to logic gates.
 But, before doing this, we need to point out some concepts:
@@ -189,7 +189,7 @@ Once we have the D Flip-Flop with the tap circuit if we want to implement a LFSR
 	\caption{Implementation of a LFSR (length of 4) with D Flip-Flop with tap circuit. (For simplicity we neglect the links for clock and set/reset)}
 \end{figure}
 
-\noindent It' important to do some observations about this implementation.
+\noindent It's important to do some observations about this implementation.
 \begin{itemize}
 	\item The first flip flop (the $0^{th}$) is a particular one. Its input port "isTap" must be linked to the ground (it must be always 0) because doesn't exist a flip flop before the zero one.
 	\item The initialization of the flip-flops is ensured by the basic D Flip-Flop linking the set port of the $i^{th}$ flip-flop to $seed[i]$ (this is not shown in figure 2.4)
@@ -211,9 +211,13 @@ Abstracting from the internal details it's possible to describe the LFSR as in t
 	\item \emph{clock}: the clock in common for all flip-flops.
 	\item \emph{outputBit}: the bit that is the result of the LFSR's algorithm.
 \end{itemize} 
-Let's sum up the operations done by the LFSR.
+Let's sum up the operations done by the LFSR:
+
+\noindent The LFSR is programmable, because once we have fixed the length N it can works with any polynomial feedback because of \emph{isTap[N-2:0]}. Then it's also possible to initialize, at the reset, the shift register using \emph{seed[N-1:0]}. Then, when all these signal are given to the device, it start to work and to produce a pseudo-random sequence of bits.
 \chapter{VHDL Code}
+In this section we will see the VHDL code for all the devices seen previously: starting from the basic ones, that are necessary to implement an LFSR, to arrive at the LFSR itself.
 \section{D Flip-Flop with Set/Reset}
+The basic device needed for the LFSR is tge D Flip-Flop wit Set/Reset.
 \lstset{ %
 	language=VHDL}
 \begin{lstlisting}

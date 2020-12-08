@@ -3,17 +3,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity lfsr is
-	generic (Nbit : positive := 16);
+	generic (Nbit : positive := 8);
 	port(
-			clock			:	in 	std_logic;
+			clock		:	in 	std_logic;
 			reset 		:	in 	std_logic;
-			--isTap		: 	in 	std_logic_vector(Nbit-2 downto 0):
-			--seed		:	in 	std_logic_vector(Nbit-1 downto 0);
-			isTap		:	in std_logic;
-			seed		: 	in std_logic_vector(1 downto 0);
-			outputBit	: 	out std_logic;
-						-- debugging
-			state		: out std_logic_vector(1 downto 0)
+			isTap		: 	in 	std_logic_vector(Nbit-2 downto 0);
+			seed		:	in 	std_logic_vector(Nbit-1 downto 0);
+			outputBit	: 	out std_logic
+			-- debugging
+			--state		: out std_logic_vector(1 downto 0)
 		);
 	end lfsr;
 
@@ -33,25 +31,19 @@ architecture rtl of lfsr is
 
 	signal lastBit : std_logic := '0';
 	signal intercon : std_logic_vector(Nbit-1 downto 0);
-	-- signal for test
-	signal int : std_logic;
 begin
-	-- possible general code
-	--GEN:for i in 0 to Nbit-1 generate
-	--	FIRST: 	if i = 0 generate
-	--				FF1 : dff_tap_circuit port map(clock, reset, lastBit,'0', lastBit,intercon(i));
-	--			end generate FIRST;
-	--	INTERNAL:	if (i>=1) and (i<Nbit-1) generate
-	--					FFI : dff_tap_circuit port map(clock, reset, intercon(i-1), isTap(i-1), lastBit, intercon(i));
-	--				end generate INTERNAL;
-	--	LAST:	if i=Nbit-1 generate
-	--				FFL : dff_tap_circuit port map(clock, reset, intercon(i-1), isTap(i-1), lastBit, lastBit);
-	--			end generate LAST;
-	--end generate GEN;
+	GEN:for i in 0 to Nbit-1 generate
+		FIRST: 	if i = 0 generate
+					FF1 : dff_tap_circuit port map(clock, reset, seed(i), lastBit,'0', lastBit,intercon(i));
+				end generate FIRST;
+		INTERNAL:	if (i>=1) and (i<Nbit-1) generate
+						FFI : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, intercon(i));
+					end generate INTERNAL;
+		LAST:	if i=Nbit-1 generate
+					FFL : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, lastBit);
+				end generate LAST;
+	end generate GEN;
 
-	-- code for testing
-	FF1 : dff_tap_circuit port map(clock, reset, seed(0), lastBit,'0', lastBit,int);
-	FFI : dff_tap_circuit port map(clock, reset, seed(1), int, isTap, lastBit, lastBit);
-	state <= int&lastBit;
+	state <= intercon&lastBit;
 	outputBit <= lastBit;
 end rtl;

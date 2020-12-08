@@ -1,10 +1,10 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity lfsr_tb is
-end lfsr_tb;
+entity lfsr_dff_tap_c_tb is
+end lfsr_dff_tap_c_tb;
 
-architecture bhv of lfsr_tb is
+architecture bhv of lfsr_dff_tap_c_tb is
 	constant T_CLK   : time := 10 ns;
 	constant T_RESET : time := 25 ns;
 

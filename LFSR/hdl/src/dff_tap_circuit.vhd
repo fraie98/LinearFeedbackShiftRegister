@@ -2,7 +2,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity DFF_tap_circuit is
+entity dff_tap_circuit is
 	port(
 			clk			:	in 	std_logic;
 			reset 		:	in 	std_logic;
@@ -12,10 +12,10 @@ entity DFF_tap_circuit is
 			feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
 			q_out		:	out std_logic
 		);
-	end DFF_tap_circuit;
+	end dff_tap_circuit;
 
 
-architecture rtl of DFF_tap_circuit is
+architecture rtl of dff_tap_circuit is
 component dff is
 	port(
 			clk		:	in 	std_logic;

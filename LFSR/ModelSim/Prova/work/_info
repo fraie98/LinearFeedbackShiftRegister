@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/FF_tap_circuit
 Edff
-Z0 w1607357127
+Z0 w1607452326
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z3 dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/Prova
@@ -17,13 +17,13 @@ Z4 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff
 Z5 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd
 l0
 L5
-V:ba6gO]_KXF]4:^35ezcX3
-!s100 W=`561[`MKcDH9jz=kFKL2
+VFea_aA8Zg]U?`OCdcdbdn1
+!s100 ]5f2nYLa:H^ZQODV]<h[?1
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1607358405
+Z7 !s110 1607453130
 !i10b 1
-Z8 !s108 1607358405.000000
+Z8 !s108 1607453130.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 Z10 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 !i113 1
@@ -32,11 +32,11 @@ Z12 tExplicit 1
 Artl
 R1
 R2
-DEx4 work 3 dff 0 22 :ba6gO]_KXF]4:^35ezcX3
+DEx4 work 3 dff 0 22 Fea_aA8Zg]U?`OCdcdbdn1
 l17
 L16
-V`1VP^b4TVH]=cC>>f<Ko_3
-!s100 X@BRRYRPagl]V[jGZNBOb3
+V3PSM4gReMRGmkE@6AZT@e2
+!s100 GPV2OnT0f1OXc52VCgYog2
 R6
 32
 R7
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Edff_tap_circuit
-Z13 w1607357081
+Z13 w1607447230
 R1
 R2
 R3
@@ -56,8 +56,8 @@ Z14 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/df
 Z15 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd
 l0
 L5
-Vil7zN7dC0l;`THgP0FWG@1
-!s100 Q9X7m>0E`NX546T5?VQTU2
+VP1?h9`3W9Rja<PlaZTe1D3
+!s100 S5gF;L>[3]5IiT3>gHZ9V1
 R6
 32
 R7
@@ -71,11 +71,11 @@ R12
 Artl
 R1
 R2
-DEx4 work 15 dff_tap_circuit 0 22 il7zN7dC0l;`THgP0FWG@1
+DEx4 work 15 dff_tap_circuit 0 22 P1?h9`3W9Rja<PlaZTe1D3
 l30
 L18
-VhE09@UnDAJJ2S0l0o2M5b1
-!s100 >N6QGZ7hE;K`lzfF1nFWm0
+VdeK@hHJa:_:Mo]onUBkOk3
+!s100 W<hC]HZgN6j1BhWQnM:4W1
 R6
 32
 R7
@@ -87,7 +87,7 @@ R17
 R11
 R12
 Elfsr
-Z18 w1607358368
+Z18 w1607452957
 R1
 R2
 R3
@@ -95,8 +95,8 @@ Z19 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lf
 Z20 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
 l0
 L5
-VFLK@0mUbP;2d7<n_:J:GZ2
-!s100 5:U4f]U=i34OT0d^QzJoH2
+VkKTHnFhILLM665e[Q@bA52
+!s100 7ed:IU9XzoD?W@?``@Y610
 R6
 32
 R7
@@ -110,11 +110,11 @@ R12
 Artl
 R1
 R2
-DEx4 work 4 lfsr 0 22 FLK@0mUbP;2d7<n_:J:GZ2
+DEx4 work 4 lfsr 0 22 kKTHnFhILLM665e[Q@bA52
 l38
 L21
-V4B9E;ZI70US:RHWgY^c4[0
-!s100 eYi]<9@o9406273z:YR;X3
+VoP:E7Mmg5V;l^WIkR3DBg3
+!s100 2OA`biM2R5IFaKgKeE^dE3
 R6
 32
 R7
@@ -126,7 +126,7 @@ R22
 R11
 R12
 Elfsr_tb
-Z23 w1607358395
+Z23 w1607453123
 R1
 R2
 R3
@@ -138,29 +138,29 @@ V<TUOK;b=WLL^ne:m:EFYi1
 !s100 [2d=MiPi7Xkcb^9QkmU6;1
 R6
 32
-Z26 !s110 1607358406
+!s110 1607453131
 !i10b 1
-Z27 !s108 1607358406.000000
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
-Z29 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
+R8
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
+!s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
 !i113 1
 R11
 R12
 Abhv
 R1
 R2
-Z30 DEx4 work 7 lfsr_tb 0 22 <TUOK;b=WLL^ne:m:EFYi1
+DEx4 work 7 lfsr_tb 0 22 <TUOK;b=WLL^ne:m:EFYi1
 l36
 L7
 V507`?dLTQgRS@;]z<E>dO2
 !s100 bYF9EbK:d2@ob[mZ:0j042
 R6
 32
-R26
+!s110 1607452507
 !i10b 1
-R27
-R28
-R29
+!s108 1607452507.000000
+R26
+!s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
 !i113 1
 R11
 R12

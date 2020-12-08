@@ -2,7 +2,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity DFF is
+entity dff is
 	port(
 			clk		:	in 	std_logic;
 			reset 	:	in 	std_logic;
@@ -10,10 +10,10 @@ entity DFF is
 			d 		:	in 	std_logic;
 			q 		:	out std_logic
 		);
-	end DFF;
+	end dff;
 
 
-architecture rtl of DFF is
+architecture rtl of dff is
 begin
 	dff_p:process(reset,clk)
 	begin

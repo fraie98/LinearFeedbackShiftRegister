@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  7 DEC 2020 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  8 DEC 2020 19:26
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -364,19 +364,19 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 [9
 
-]
+] [10]
 Chapter 4.
-[10
+[11
 
 ] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 6491 strings out of 479832
- 98768 string characters out of 2871058
- 678691 words of memory out of 3000000
- 23384 multiletter control sequences out of 15000+200000
+ 6510 strings out of 479832
+ 98995 string characters out of 2871058
+ 784691 words of memory out of 3000000
+ 23403 multiletter control sequences out of 15000+200000
  551467 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,8n,76p,699b,1215s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,8n,76p,699b,1621s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecti0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\tcti0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour
@@ -407,9 +407,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (11 pages, 331431 bytes).
+Output written on LFSR.pdf (12 pages, 342070 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
+ 551 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

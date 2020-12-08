@@ -217,36 +217,90 @@ Let's sum up the operations done by the LFSR:
 \chapter{VHDL Code}
 In this section we will see the VHDL code for all the devices seen previously: starting from the basic ones, that are necessary to implement an LFSR, to arrive at the LFSR itself.
 \section{D Flip-Flop with Set/Reset}
-The basic device needed for the LFSR is tge D Flip-Flop wit Set/Reset.
+The basic device needed for the LFSR is a D Flip-Flop wit Set/Reset.
 \lstset{ %
 	language=VHDL}
 \begin{lstlisting}
--- D Flip-Flop with Set/Reset
+	-- D Flip-Flop with Set/Reset
 	library ieee;
 	use ieee.std_logic_1164.all;
-
-	entity DFF is
+	
+	entity dff is
 		port(
 			clk		:	in 	std_logic;
-			reset 	:	in 	std_logic;
+			reset	:	in 	std_logic;
 			set 	:	in 	std_logic;
 			d 		:	in 	std_logic;
 			q 		:	out std_logic
 		);
-	end DFF;
-
-	architecture rtl of DFF is
+	end dff;
+	
+	architecture rtl of dff is
 	begin
 		dff_p:process(reset,clk)
 		begin
 			if reset='0' then
-				q <= set;
+				if set='0'
+					d <= '0';
+				elsif set='1'
+					d <= '1';
+				end if;
 			elsif(rising_edge(clk)) then
 				q <= d;
 			end if;
 		end process;
 	end rtl;
 \end{lstlisting}
+The behaviour of this device is very simple, at the initialization phase (when reset is 0) the output is initialized with the set value. Then in the normal case the output follow the input and it is update at each rising edge of the clock.
+
+\section{D Flip-Flop with Set/reset and Tap Circuit}
+The memory cell which maintains a bit within the LFSR is the D-Flip-Flop with Set/Reset and tap circuit that implements the characteristic features of the LFSR which differentiates it from a simple shift register.
+\begin{lstlisting}
+	-- D Flip-Flop with Set/Reset and tap circuit
+	library ieee;
+	use ieee.std_logic_1164.all;
+	
+	entity dff_tap_circuit is
+		port(
+			clk				:	in 	std_logic;
+			reset 		:	in 	std_logic;
+			set				:	in 	std_logic;  -- initialization input
+			d_in			:	in 	std_logic;	
+			isTap			:	in 	std_logic;	-- it indicates if the input must be changed
+																	-- (it does if the previous ff is a tap)
+			feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
+			q_out			:	out std_logic
+		);
+	end dff_tap_circuit;
+	
+	
+	architecture rtl of dff_tap_circuit is
+	component dff is
+		port(
+			clk		:	in 	std_logic;
+			reset :	in 	std_logic;
+			set		:	in 	std_logic;
+			d 		:	in 	std_logic;
+			q 		:	out std_logic
+		);
+	end component;
+	
+	signal new_d : std_logic;
+	begin
+		internal_dff : dff
+		port map(
+			clk 	=> clk,
+			reset	=> reset,
+			set 	=> set,
+			d 		=> new_d,
+			q 		=> q_out
+		);
+		
+		new_d <= d_in xor (isTap and feedback);
+	
+	end rtl;
+\end{lstlisting}
+This device acts as the previous, the only difference is the addition of the tap circuit which is described in the row 41.
 \chapter{Test-Plan}
 Notes for test plan:
 \begin{itemize}

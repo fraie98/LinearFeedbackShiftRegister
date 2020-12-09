@@ -297,11 +297,16 @@ The memory cell which maintains a bit within the LFSR is the D-Flip-Flop with Se
 	end rtl;
 \end{lstlisting}
 This device acts as the previous, the only difference is the addition of the tap circuit which is described in the row 41.
+
+\section{LFSR}
+We use (0 to N) instead of (N downto 0) in the declaration of the standard logic vectors for isTap and seed because they are not numbers but they indicate positions, so the left-most bit is the one for the $0^{th}$ flip-flop and so in order to access it I would like to use the following notation: \emph{vector(0)} and not this \emph{vector(N-1)}. To achieve this aim I have to use the keyword \emph{to} instead of \emph{downto}.
+
 \chapter{Test-Plan}
 Notes for test plan:
 \begin{itemize}
 	\item test del solo dff con tap circuit
 	\item test con solo due dff per testare il reset
+	\item test lfsr con tap tutti a 0 (shift register)
 	\item test completo con programm in C
 \end{itemize}
 

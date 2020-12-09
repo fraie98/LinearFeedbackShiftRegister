@@ -7,11 +7,11 @@ entity lfsr is
 	port(
 			clock		:	in 	std_logic;
 			reset 		:	in 	std_logic;
-			isTap		: 	in 	std_logic_vector(Nbit-2 downto 0);
-			seed		:	in 	std_logic_vector(Nbit-1 downto 0);
-			outputBit	: 	out std_logic
+			isTap		: 	in 	std_logic_vector(0 to Nbit-2);
+			seed		:	in 	std_logic_vector(0 to Nbit-1);
+			outputBit	: 	out std_logic;
 			-- debugging
-			--state		: out std_logic_vector(1 downto 0)
+			state		: 	out std_logic_vector(Nbit-1 downto 0)
 		);
 	end lfsr;
 
@@ -30,7 +30,7 @@ architecture rtl of lfsr is
 	end component;
 
 	signal lastBit : std_logic := '0';
-	signal intercon : std_logic_vector(Nbit-1 downto 0);
+	signal intercon : std_logic_vector(0 to Nbit-2);
 begin
 	GEN:for i in 0 to Nbit-1 generate
 		FIRST: 	if i = 0 generate
@@ -44,6 +44,6 @@ begin
 				end generate LAST;
 	end generate GEN;
 
-	state <= intercon&lastBit;
+	state <= intercon & lastBit;
 	outputBit <= lastBit;
 end rtl;

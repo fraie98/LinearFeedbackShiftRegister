@@ -1,35 +1,33 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity lfsr_dff_tap_c_tb is
-end lfsr_dff_tap_c_tb;
+entity lfsr_tb is
+end lfsr_tb;
 
-architecture bhv of lfsr_dff_tap_c_tb is
+architecture bhv of lfsr_tb is
+	constant Nbit : positive := 8;
 	constant T_CLK   : time := 10 ns;
 	constant T_RESET : time := 25 ns;
 
 	-- SIGNALS
 	signal clk_tb 		: std_logic := '0'; 	
 	signal reset_tb 	: std_logic := '0';
-	signal isTap_tb 	: std_logic;
-	signal seed_tb		: std_logic_vector(1 downto 0);
+	signal isTap_tb 	: std_logic_vector(0 to Nbit-2);
+	signal seed_tb		: std_logic_vector(0 to Nbit-1);
 	signal output_tb	: std_logic;
 	signal end_sim 		: std_logic := '1';
-	signal actual_state : std_logic_vector(1 downto 0);
+	signal actual_state : std_logic_vector(Nbit-1 downto 0);
 
 	-- COMPONENT
 	component lfsr is
-	generic (Nbit : positive := 8);
 	port(
-			clock			:	in 	std_logic;
+			clock		:	in 	std_logic;
 			reset 		:	in 	std_logic;
-			--isTap		: 	in 	std_logic_vector(Nbit-2 downto 0);
-			--seed		:	in 	std_logic_vector(Nbit-1 downto 0);
-			isTap		:	in std_logic;
-			seed		: 	in std_logic_vector(1 downto 0);
+			isTap		: 	in 	std_logic_vector(0 to Nbit-2);
+			seed		:	in 	std_logic_vector(0 to Nbit-1);
 			outputBit	: 	out std_logic;
-						-- debugging
-			state		: out std_logic_vector(1 downto 0)
+			-- debugging
+			state		: out std_logic_vector(Nbit-1 downto 0)
 		);
 	end component;
 
@@ -52,12 +50,10 @@ begin
 	begin
 		if(reset_tb='0') then
 			t:=0;
-			isTap_tb <= '0'; 	-- It's not a tap so it's a simple shift register
-			seed_tb <= "01";
+			isTap_tb <= "0000000"; 	-- It's not a tap so it's a simple shift register
+			seed_tb <= "00000001";
 		elsif (rising_edge(clk_tb)) then
 			case(t) is
-					
-				--when 10 => isTap_tb <= '1';
 
 				when 20 => end_sim <= '0';
 

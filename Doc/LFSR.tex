@@ -299,8 +299,61 @@ The memory cell which maintains a bit within the LFSR is the D-Flip-Flop with Se
 This device acts as the previous, the only difference is the addition of the tap circuit which is described in the row 41.
 
 \section{LFSR}
-We use (0 to N) instead of (N downto 0) in the declaration of the standard logic vectors for isTap and seed because they are not numbers but they indicate positions, so the left-most bit is the one for the $0^{th}$ flip-flop and so in order to access it I would like to use the following notation: \emph{vector(0)} and not this \emph{vector(N-1)}. To achieve this aim I have to use the keyword \emph{to} instead of \emph{downto}.
+Now we see the way in which we have to aggregate the previous devices in order to implement an LFSR.
 
+\noindent We use (0 to N) instead of (N downto 0) in the declaration of the standard logic vectors for isTap and seed, because they are not numbers but they indicate positions, so the left-most bit is the one for the $0^{th}$ flip-flop and so in order to access it I would like to use the following notation: \emph{vector(0)} and not this \emph{vector(N-1)}. To achieve this aim I have to use the keyword \emph{to} instead of \emph{downto}.
+\begin{lstlisting}
+-- LinearFeedbackShiftRegister
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr is
+generic (Nbit : positive := 8);
+port(
+clock		:	in 	std_logic;
+reset 		:	in 	std_logic;
+isTap		: 	in 	std_logic_vector(0 to Nbit-2);
+seed		:	in 	std_logic_vector(0 to Nbit-1);
+outputBit	: 	out std_logic;
+-- debugging
+state		: 	out std_logic_vector(Nbit-1 downto 0)
+);
+end lfsr;
+
+
+architecture rtl of lfsr is
+component dff_tap_circuit is
+port(
+clk			:	in 	std_logic;
+reset 		:	in 	std_logic;
+set			: 	in 	std_logic;  -- initialization input
+d_in		:	in 	std_logic;	
+isTap		:	in 	std_logic;	-- it indicates if the input must be changed (it does if the previous ff is a tap)
+feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
+q_out		:	out std_logic
+);
+end component;
+
+signal lastBit : std_logic := '0';
+signal intercon : std_logic_vector(0 to Nbit-2);
+begin
+GEN:for i in 0 to Nbit-1 generate
+FIRST: 	if i = 0 generate
+FF1 : dff_tap_circuit port map(clock, reset, seed(i), lastBit,'0', lastBit,intercon(i));
+end generate FIRST;
+INTERNAL:	if (i>=1) and (i<Nbit-1) generate
+FFI : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, intercon(i));
+end generate INTERNAL;
+LAST:	if i=Nbit-1 generate
+FFL : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, lastBit);
+end generate LAST;
+end generate GEN;
+
+state <= intercon & lastBit;
+outputBit <= lastBit;
+end rtl;
+\end{lstlisting}
+In the next chapter we will see the strategies to test this device and to ensure that it works as a Linear Feedback Shift Register.
 \chapter{Test-Plan}
 Notes for test plan:
 \begin{itemize}

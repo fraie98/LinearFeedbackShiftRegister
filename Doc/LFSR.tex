@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{fancyvrb}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
 \usepackage{color}
 \usepackage{listings}
@@ -32,11 +34,52 @@
 \geometry{a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,%
 	heightrounded,bindingoffset=5mm}
 \begin{document}
+	
+\begin{titlepage}
 
-\title{\Huge{Linear Feedback Shift Register}}
-\author{\Large{Francesco Iemma}}
-\date{Academic Year 2020/21}
-\maketitle
+	\begin{tikzpicture}[overlay,remember picture]
+		\draw[line width=4pt]
+		($ (current page.north west) + (1cm,-1cm) $)
+		rectangle
+		($ (current page.south east) + (-1cm,1cm) $);
+		\draw[line width=1.5pt]
+		($ (current page.north west) + (1.2cm,-1.2cm) $)
+		rectangle
+		($ (current page.south east) + (-1.2cm,1.2cm) $);
+	\end{tikzpicture}
+	
+	\begin{center}
+		\textup{\large  \textbf{University of Pisa}\\[0.5cm]\textbf{\large M.Sc IN COMPUTER ENGINEERING}}
+		
+		%---------------------------------Figure------------------------------
+		\vspace{\stretch{1}}
+		\begin{center}
+			\begin{figure}[h]  %h means here other options t , b, p, etc.
+				\centering
+				\includegraphics[width=0.3\linewidth]{./img/unipi.png}
+			\end{figure}
+		\end{center}
+		
+		%----------------------------
+		\begin{LARGE}
+			{\textbf {"LINEAR FEEDBACK SHIFT REGISTER" }}\end{LARGE}\\[1cm]
+		\textit{AUTHOR}\\[0.1cm]
+		\begin{Large}
+			\textbf{Francesco Iemma}\\[0.1cm]
+		\end{Large}
+		
+		
+		\vfill
+		\vspace{\stretch{2}}
+		\textbf{Academic Year: 2020/2021}
+	\end{center}
+
+\end{titlepage}
+
+%\title{\Huge{Linear Feedback Shift Register}}
+%\author{\Large{Francesco Iemma}}
+%\date{Academic Year 2020/21}
+%\maketitle
 \tableofcontents
 
 \chapter{Introduction}
@@ -185,7 +228,7 @@ So the logic block diagram of a flip-flop with the tap circuit is the following:
 Once we have the D Flip-Flop with the tap circuit if we want to implement a LFSR with a length of N, we need N D Flip-Flop with tap circuit.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.19]{img/LFSR_logic_block.png}
+	\includegraphics[scale=0.18]{img/LFSR_logic_block.png}
 	\caption{Implementation of a LFSR (length of 4) with D Flip-Flop with tap circuit. (For simplicity we neglect the links for clock and set/reset)}
 \end{figure}
 

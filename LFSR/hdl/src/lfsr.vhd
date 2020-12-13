@@ -3,7 +3,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity lfsr is
-	generic (Nbit : positive := 8);
+	generic (Nbit : positive := 16);
 	port(
 			clock		:	in 	std_logic;
 			reset 		:	in 	std_logic;

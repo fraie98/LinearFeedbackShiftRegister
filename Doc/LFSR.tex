@@ -103,7 +103,7 @@ In most cases the way in which the taps affect the next state is using XOR gates
 	\item $output = b'_{N-1}$
 \end{itemize}
 
-\noindent The taps in our case are the bits 11, 13, 14, 16 (we can recognize them gazing to the exponents of \emph{x} in the feedback polynomial) so this means that the inputs of the feedback logic are these. And so in our previous notation $T=\{11, 13, 14, 16\}$, then $b_0 = y(11, 13, 14, 16)$.
+\noindent The taps in our case are the bits 11, 13, 14, 16 (we can recognize them gazing to the exponents of \emph{x} in the feedback polynomial) so this means that the inputs of the feedback logic are these. And so in our previous notation (considering that we start to count from 0) we will have $T=\{10, 12, 13, 15\}$.
 
 \noindent In the following image it's possible to see a logic representation of a generic LFSR.
 \begin{figure}[htbp]
@@ -112,7 +112,7 @@ In most cases the way in which the taps affect the next state is using XOR gates
 	\caption{Logic representation of a LFSR}
 \end{figure}
 \section{LFSR's Properties}
-In order to complete this brief journey through the world of LFSRs, let focus on a particular type of LFSR which has an interesting property, this is the so-called maximum-length LFSR. An LFSR is a maximum-length one, if and only if, the feedback polynomial is primitive and so it's necessary that:
+Now let focus on a particular type of LFSR which has an interesting property, this is the so-called maximum-length LFSR. An LFSR is a maximum-length one, if and only if, the feedback polynomial is primitive and so it's necessary that:
 \begin{itemize}
 	\item The number of taps is even
 	\item The taps values are coprime

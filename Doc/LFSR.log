@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  13 DEC 2020 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  13 DEC 2020 17:10
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -656,7 +656,7 @@ Package pdftex.def Info: img/XORtruthTable.png  used on input line 206.
 <img/ANDtruthTable.png, id=57, 162.6075pt x 202.7575pt>
 File: img/ANDtruthTable.png Graphic file (type png)
 <use img/ANDtruthTable.png>
-Package pdftex.def Info: img/ANDtruthTable.png  used on input line 213.
+Package pdftex.def Info: img/ANDtruthTable.png  used on input line 215.
 (pdftex.def)             Requested size: 97.56525pt x 121.65543pt.
 [6
 
@@ -664,15 +664,15 @@ Package pdftex.def Info: img/ANDtruthTable.png  used on input line 213.
 <img/FF_tap_circuit.png, id=64, 666.49pt x 343.2825pt>
 File: img/FF_tap_circuit.png Graphic file (type png)
 <use img/FF_tap_circuit.png>
-Package pdftex.def Info: img/FF_tap_circuit.png  used on input line 223.
+Package pdftex.def Info: img/FF_tap_circuit.png  used on input line 225.
 (pdftex.def)             Requested size: 399.89708pt x 205.97107pt.
 <img/LFSR_logic_block.png, id=65, 2402.9775pt x 500.87125pt>
 File: img/LFSR_logic_block.png Graphic file (type png)
 <use img/LFSR_logic_block.png>
-Package pdftex.def Info: img/LFSR_logic_block.png  used on input line 231.
-(pdftex.def)             Requested size: 432.51729pt x 90.15292pt.
+Package pdftex.def Info: img/LFSR_logic_block.png  used on input line 233.
+(pdftex.def)             Requested size: 456.57048pt x 95.16652pt.
 
-Overfull \hbox (19.9523pt too wide) in paragraph at lines 231--232
+Overfull \hbox (44.0055pt too wide) in paragraph at lines 233--234
  [][] 
  []
 
@@ -681,7 +681,7 @@ Overfull \hbox (19.9523pt too wide) in paragraph at lines 231--232
 <img/LFSR-overall.png, id=72, 536.0025pt x 335.2525pt>
 File: img/LFSR-overall.png Graphic file (type png)
 <use img/LFSR-overall.png>
-Package pdftex.def Info: img/LFSR-overall.png  used on input line 245.
+Package pdftex.def Info: img/LFSR-overall.png  used on input line 247.
 (pdftex.def)             Requested size: 268.0006pt x 167.62584pt.
  [8 <./img/LFSR-overall.png>]
 Chapter 3.
@@ -702,7 +702,7 @@ Here is how much of TeX's memory you used:
  33659 multiletter control sequences out of 15000+200000
  551668 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,8n,96p,699b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\tcrm0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecti0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour
@@ -732,9 +732,9 @@ mr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (13 pages, 544969 bytes).
+Output written on LFSR.pdf (13 pages, 546280 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
+ 569 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

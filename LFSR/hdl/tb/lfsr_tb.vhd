@@ -59,14 +59,19 @@ begin
 			isTap_tb <= "000000000010110";		-- 1 + x^11 + x^13 + x^14 + x^16 -> taps are 10 12 13
 			seed_tb <= "0000101011000110";
 		elsif (rising_edge(clk_tb)) then
-			case(t) is
+			if actual_state=seed_tb and t=0 then
+				t:=t+1;
+			elsif actual_state=seed_tb and t=1 then
+				end_sim <='0';
+			end if;
+			--case(t) is
 
-				when 20 => end_sim <= '0';
+			--	when 20 => end_sim <= '0';
 
-				when others => null;
+			--	when others => null;
 			
-			end case ;
-			t:=t+1;
+			--end case ;
+			--t:=t+1;
 		end if;
 	end process;
 

@@ -60,7 +60,7 @@ void printLFSR(int a[N])
  */
 bool isTap(int i)
 {
-	if(i==11 || i == 13 || i== 14)
+	if(i==10 || i == 12 || i== 13)
 		return true;
 	
 	return false;
@@ -75,6 +75,10 @@ int main()
 	// Reset Phase: actual state is initialized to the seed value
 	for(int i = 0; i<N; i++)
 		actual_state[i] = seed[i];
+
+	/* It's necessary because at the first clock
+	 * the output will be undefined*/		
+	cout << "U" << endl;
 
 	do
 	{

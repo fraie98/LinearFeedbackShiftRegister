@@ -101,5 +101,13 @@ int main()
 		cout << lastBit << endl;
 	}while(!compare(actual_state,seed));
 
+	/* Print the output of the last state (i.e. the first of the new cycle)
+	 * This is necessary to emulate the effect of the end_sim
+	 * in VHDL. When the condition in the while is true then
+	 * the simulation ends but in the ModelSim simulation
+	 * it ends after a clock (because end_sim goes to 0 after
+	 * a clock cycle). So the output of the first state of the 
+	 * new cycle must be considered*/
+	cout << actual_state[N-1] << endl;
 	return 0;
 }

@@ -16,7 +16,6 @@ architecture bhv of lfsr_tb is
 
 	-- SIGNALS
 	signal clk_tb 		: std_logic := '0';
-	signal sampler 		:std_logic := '0';
 	signal reset_tb 	: std_logic := '0';
 	signal isTap_tb 	: std_logic_vector(0 to Nbit-2);
 	signal seed_tb		: std_logic_vector(0 to Nbit-1);

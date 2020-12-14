@@ -15,7 +15,8 @@ architecture bhv of lfsr_tb is
 	constant T_RESET : time := 25 ns;
 
 	-- SIGNALS
-	signal clk_tb 		: std_logic := '0'; 	
+	signal clk_tb 		: std_logic := '0';
+	signal sampler 		:std_logic := '0';
 	signal reset_tb 	: std_logic := '0';
 	signal isTap_tb 	: std_logic_vector(0 to Nbit-2);
 	signal seed_tb		: std_logic_vector(0 to Nbit-1);
@@ -64,14 +65,6 @@ begin
 			elsif actual_state=seed_tb and t=1 then
 				end_sim <='0';
 			end if;
-			--case(t) is
-
-			--	when 20 => end_sim <= '0';
-
-			--	when others => null;
-			
-			--end case ;
-			--t:=t+1;
 		end if;
 	end process;
 
@@ -79,10 +72,13 @@ begin
 	variable BUF : line;
 	begin
 		loop
-			wait on clk_tb;
-			--WRITE(BUF,output_tb,right,10);
-			WRITE(BUF,output_tb);
-			WRITEline(OUT_LFSR,BUF);
+			wait on clk_tb until clk_tb='1';
+				if reset_tb='1' then
+					--WRITE(BUF,now,right,10);
+					--WRITE(BUF,actual_state,right,10);
+					WRITE(BUF,output_tb);
+					WRITEline(OUT_LFSR,BUF);
+				end if;
 		end loop;
 	end process;
 

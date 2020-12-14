@@ -21,9 +21,9 @@ VFea_aA8Zg]U?`OCdcdbdn1
 !s100 ]5f2nYLa:H^ZQODV]<h[?1
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1607944887
+Z7 !s110 1607949447
 !i10b 1
-Z8 !s108 1607944887.000000
+Z8 !s108 1607949447.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 Z10 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 !i113 1
@@ -126,7 +126,7 @@ R22
 R11
 R12
 Elfsr_tb
-Z23 w1607944882
+Z23 w1607949406
 Z24 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R1
@@ -152,10 +152,10 @@ R24
 R2
 R1
 Z29 DEx4 work 7 lfsr_tb 0 22 c_13<_gML:a6W_RhTJE8o2
-l39
+l40
 L9
-V46WR_o0JSVV5]NXYbCZA@0
-!s100 XX]OjzZ5oMeI^bNXCaj[e1
+Z30 Vi^mC?L_>U;CkVg2cX[Y^H2
+Z31 !s100 VO_VCiZWB?1FQ1:fD4[_f2
 R6
 32
 R7

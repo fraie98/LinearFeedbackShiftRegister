@@ -16,3 +16,5 @@
 \contentsline {section}{\numberline {3.2}D Flip-Flop with Set/reset and Tap Circuit}{9}{}%
 \contentsline {section}{\numberline {3.3}LFSR}{10}{}%
 \contentsline {chapter}{\numberline {4}Test-Plan}{12}{}%
+\contentsline {section}{\numberline {4.1}D-Flip-Flop Test}{12}{}%
+\contentsline {section}{\numberline {4.2}D-Flip-Flop with Tap Circuit Test}{13}{}%

@@ -348,64 +348,138 @@ Now we see the way in which we have to aggregate the previous devices in order t
 
 \noindent We use (0 to N) instead of (N downto 0) in the declaration of the standard logic vectors for isTap and seed, because they are not numbers but they indicate positions, so the left-most bit is the one for the $0^{th}$ flip-flop and so in order to access it I would like to use the following notation: \emph{vector(0)} and not this \emph{vector(N-1)}. To achieve this aim I have to use the keyword \emph{to} instead of \emph{downto}.
 \begin{lstlisting}
--- LinearFeedbackShiftRegister
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity lfsr is
-generic (Nbit : positive := 8);
-port(
-clock		:	in 	std_logic;
-reset 		:	in 	std_logic;
-isTap		: 	in 	std_logic_vector(0 to Nbit-2);
-seed		:	in 	std_logic_vector(0 to Nbit-1);
-outputBit	: 	out std_logic;
--- debugging
-state		: 	out std_logic_vector(Nbit-1 downto 0)
-);
-end lfsr;
-
-
-architecture rtl of lfsr is
-component dff_tap_circuit is
-port(
-clk			:	in 	std_logic;
-reset 		:	in 	std_logic;
-set			: 	in 	std_logic;  -- initialization input
-d_in		:	in 	std_logic;	
-isTap		:	in 	std_logic;	-- it indicates if the input must be changed (it does if the previous ff is a tap)
-feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
-q_out		:	out std_logic
-);
-end component;
-
-signal lastBit : std_logic := '0';
-signal intercon : std_logic_vector(0 to Nbit-2);
-begin
-GEN:for i in 0 to Nbit-1 generate
-FIRST: 	if i = 0 generate
-FF1 : dff_tap_circuit port map(clock, reset, seed(i), lastBit,'0', lastBit,intercon(i));
-end generate FIRST;
-INTERNAL:	if (i>=1) and (i<Nbit-1) generate
-FFI : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, intercon(i));
-end generate INTERNAL;
-LAST:	if i=Nbit-1 generate
-FFL : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, lastBit);
-end generate LAST;
-end generate GEN;
-
-state <= intercon & lastBit;
-outputBit <= lastBit;
-end rtl;
+	-- LinearFeedbackShiftRegister
+	library ieee;
+	use ieee.std_logic_1164.all;
+	
+	entity lfsr is
+		generic (Nbit : positive := 16);
+		port(
+			clock			:	in 	std_logic;
+			reset			:	in 	std_logic;
+			isTap			:	in 	std_logic_vector(0 to Nbit-2);
+			seed			:	in 	std_logic_vector(0 to Nbit-1);
+			outputBit	:	out std_logic;
+			-- debugging
+			state			:	out std_logic_vector(Nbit-1 downto 0)
+		);
+	end lfsr;
+	
+	
+	architecture rtl of lfsr is
+		component dff_tap_circuit is
+			port(
+				clk				:	in 	std_logic;
+				reset			:	in 	std_logic;
+				set				: in 	std_logic; 
+				d_in			:	in 	std_logic;	
+				isTap			:	in 	std_logic;
+				feedback	:	in 	std_logic;
+				q_out			:	out std_logic
+			);
+		end component;
+		
+		signal lastBit : std_logic := '0';
+		signal intercon : std_logic_vector(0 to Nbit-2);
+	begin
+		GEN:for i in 0 to Nbit-1 generate
+			FIRST: 	if i = 0 generate
+			FF1 : dff_tap_circuit port map(clock, reset, seed(i), lastBit,'0', lastBit,intercon(i));
+			end generate FIRST;
+			
+			INTERNAL:	if (i>=1) and (i<Nbit-1) generate
+			FFI : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, intercon(i));
+			end generate INTERNAL;
+			
+			LAST:	if i=Nbit-1 generate
+			FFL : dff_tap_circuit port map(clock, reset, seed(i), intercon(i-1), isTap(i-1), lastBit, lastBit);
+			end generate LAST;
+		end generate GEN;
+		
+		state <= intercon & lastBit;
+		outputBit <= lastBit;
+	end rtl;
 \end{lstlisting}
 In the next chapter we will see the strategies to test this device and to ensure that it works as a Linear Feedback Shift Register.
 \chapter{Test-Plan}
-Notes for test plan:
+In this chapter we will test the LFSR implemented in VHDL in the previous chapter. In order to accomplish this aim we will start testing the basic elements of the implementation up to the final LFSR. The tests performed and explained will be:
 \begin{itemize}
-	\item test del solo dff con tap circuit
-	\item test con solo due dff per testare il reset
-	\item test lfsr con tap tutti a 0 (shift register)
-	\item test completo con programm in C
+	\item Test of a simple D-Flip-Flop
+	\item Test of a D-Flip-Flop with tap circuit
+	\item Test of the LFSR with isTap inputs to 0, so it's a simple shift register
+	\item Final test of the LFSR using a C++ program which does in software what we implemented in hardware using VHDL
+\end{itemize}
+In some cases only a portion of the code will be shown, for the full code see files in LFSR/hdl/tb/
+
+\noindent When we indicate the number of clock cycles we don't consider the clock cycles of the reset state. So "after $x$ clock cycles" means "after $x$ clock cycles counted from when reset is not active.  
+
+\section{D-Flip-Flop Test}
+In order to test the simpler device (dff) we give as input 0, so the expected result is that until we change the input the output remains 0.
+\begin{lstlisting}
+	dff_process : process(clk_tb,reset_tb)
+	variable t : integer := 0;
+	begin
+		if(reset_tb='0') then
+			t:=0;
+			d_tb <= '0';
+		elsif (rising_edge(clk_tb)) then
+			case(t) is
+				when 5 => d_tb <= '1';	
+				when 10 => end_sim <= '0';	
+				when others => null;		
+			end case ;
+			t:=t+1;
+		end if;
+	end process;
+\end{lstlisting}
+The test consist in given 0 at the reset and then after 5 clock cycles change the input to 1.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\textheight, height=.125\textheight]{img/tb/wave_dff_test.png}
+	\caption{Simulation of dff test-bench using ModelSim}
+\end{figure}
+
+\noindent As we can see in the image flip flop works as we expected:
+\begin{itemize}
+	\item At the reset the output is equal to the value of the set
+	\item The ouput remains unchanged until the input is 0, when the input change to 1 (5 clocks after the end of reset) also the output follows it after a clock cycle.
 \end{itemize}
 
+\section{D-Flip-Flop with Tap Circuit Test}
+Now we want to test also the flip-flop with tap circuit, if the input isTap is 0 the flip-flop works exactly as the previous one. Instead if isTap is 1 and the feedback bit is 1 too then it's like an inverter (because the xor at the input has always an input at 1).
+\begin{lstlisting}
+	dff_process : process(clk_tb,reset_tb)
+	variable t : integer := 0;
+	begin
+		if(reset_tb='0') then
+			t:=0;
+			isTap_tb <= '0'; 	-- It's a normal dff
+			feedback_tb <= '1';
+			d_tb <= '0';
+		elsif (rising_edge(clk_tb)) then
+			case(t) is
+				when 5  => d_tb <= '1';		
+				when 10 => isTap_tb <= '1'; d_tb <='0';	
+				when 15 => d_tb <='1';	
+				when 20 => end_sim <= '0';
+				when others => null;	
+			end case ;
+			t:=t+1;
+		end if;
+	end process;
+\end{lstlisting}
+So we expect that for the first 10 clock cycles after reset the waves are the same of the previous case and then they present a inverter-like behaviour.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\textheight, height=.125\textheight]{img/tb/wave_dff_tap_circuit_test.png}
+	\caption{Simulation of test-bench of dff with tap circuit using ModelSim}
+\end{figure}
+
+\noindent From the figure 4.2 we can say that the behaviour is the one that we expect:
+\begin{itemize}
+	\item In the first 10 clock cycles (after the reset) the waves are the same of the dff case. This is right because in this period we have isTap to 0 and so the tap circuit is disabled
+	\item When isTap goes to 1 the dff with tap circuit works as an inverter (remember that feedback is 1). In fact in this moment we can see that the output remains one even if the input goes from 1 to 0. This happens because the input goes to 0 so the output at the next clock cycle will became one but it is already one, then it remains 1.
+	
+	\noindent When the input goes to 1 (after 15 clock cycles), the output, after a clock cycle, goes to 0 as we expected. 
+\end{itemize}
 \end{document}

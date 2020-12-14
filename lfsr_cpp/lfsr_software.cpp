@@ -76,10 +76,6 @@ int main()
 	for(int i = 0; i<N; i++)
 		actual_state[i] = seed[i];
 
-	/* It's necessary because at the first clock
-	 * the output will be undefined*/		
-	cout << "U" << endl;
-
 	do
 	{
 		// Feedback bit

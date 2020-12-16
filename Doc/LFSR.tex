@@ -683,4 +683,11 @@ If the console returns
 \end{Verbatim}
 Then it means that the test is ended successfully and that the LFSR implemented in VHDL works in a proper way.
 In the figure 4.6 we can see the output of the last steps in Linux console.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.4]{img/tb/linuxConsoleExecution.png}
+	\caption{Execution of the scripts in Linux console}
+\end{figure}
+\subsection{LFSR Test Conclusion}
+For a complete test plan we have to test all the $2^{16}-1$ (Remember that the state with all 0 is not allowed) possible seeds and so we have to do $65535$ tests and comparisons. Only in this way we can be sure, without doubts, that the LFSR works properly. Anyway we do only some tests and we can say with a reasonable secureness that the LFSR works in a proper way.
 \end{document}

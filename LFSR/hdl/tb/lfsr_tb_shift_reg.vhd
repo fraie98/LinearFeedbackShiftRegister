@@ -1,15 +1,10 @@
-use STD.textio.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_textio.all;
 
-entity lfsr_tb is
-end lfsr_tb;
+entity lfsr_tb_shift_reg is
+end lfsr_tb_shift_reg;
 
-architecture bhv of lfsr_tb is
-	
-	file OUT_LFSR : text is out "fileout.tv";
-
+architecture bhv of lfsr_tb_shift_reg is
 	constant Nbit : positive := 16;
 	constant T_CLK   : time := 10 ns;
 	constant T_RESET : time := 25 ns;
@@ -55,7 +50,7 @@ begin
 	begin
 		if(reset_tb='0') then
 			t:=0;
-			isTap_tb <= "000000000010110";		-- 1 + x^11 + x^13 + x^14 + x^16 -> taps are 10 12 13
+			isTap_tb <= "000000000000000"; 	-- There are no taps so it's a simple shift register
 			seed_tb <= "0000101011000110";
 		elsif (rising_edge(clk_tb)) then
 			if actual_state=seed_tb and t=0 then
@@ -65,19 +60,4 @@ begin
 			end if;
 		end if;
 	end process;
-
-	write_file : process
-	variable BUF : line;
-	begin
-		loop
-			wait on clk_tb until clk_tb='1';
-				if reset_tb='1' then
-					--WRITE(BUF,now,right,10);
-					--WRITE(BUF,actual_state,right,10);
-					WRITE(BUF,output_tb);
-					WRITEline(OUT_LFSR,BUF);
-				end if;
-		end loop;
-	end process;
-
 end bhv;

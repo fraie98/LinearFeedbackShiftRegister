@@ -1,0 +1,25 @@
+C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff_tap_circuit
+-- Compiling architecture rtl of dff_tap_circuit
+
+} {} {}} C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lfsr
+-- Compiling architecture rtl of lfsr
+
+} {} {}} C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff
+-- Compiling architecture rtl of dff
+
+} {} {}}

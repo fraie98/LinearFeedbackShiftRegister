@@ -482,4 +482,172 @@ So we expect that for the first 10 clock cycles after reset the waves are the sa
 	
 	\noindent When the input goes to 1 (after 15 clock cycles), the output, after a clock cycle, goes to 0 as we expected. 
 \end{itemize}
+
+\section{LFSR as Shift Register}
+If all bits of isTap are setted to 0 then we have a simple shift register because there are no taps. So this test consists in doing this and in controlling the proper work of this shift register.
+
+\begin{lstlisting}
+	lfsr_test_process : process(clk_tb,reset_tb)
+	variable t : integer := 0;
+	begin
+		if(reset_tb='0') then
+			t:=0;
+			isTap_tb <= "000000000000000";
+			seed_tb <= "0000101011000110";
+		elsif (rising_edge(clk_tb)) then
+			if actual_state=seed_tb and t=0 then
+				t:=t+1;
+			elsif actual_state=seed_tb and t=1 then
+				end_sim <='0';
+			end if;
+		end if;
+	end process;
+\end{lstlisting}
+We stop the simulation when the actual state of the shift register is equal to the initial one, hence we expect that the simulation ends after 16 clock cycles because the register has a length of 16 and so after this period each bit are shifted 16 times and so it has returned in the initial position.
+
+\noindent The reason why we neglect the first time that th actual state is equal to the seed is because this happens at the initialization and if we consider this the first time then the simulation ends early.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\textheight, height=.1\textheight]{img/tb/wave_lfsr_as_shift_reg_test_bin.png}
+	\caption{Part of the simulation of the test-bench of a lfsr setted as shift register}
+\end{figure}
+
+\noindent In the figure 4.3 we can see the initial part of the simulation, as we can see the first states of the device are the ones that we expect from a shift register.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\textheight, height=.1\textheight]{img/tb/wave_lfsr_as_shift_reg_test_hex.png}
+	\caption{Complete simulation of the test-bench of a lfsr setted as shift register}
+\end{figure}
+
+\noindent In the figure 4.4 we can see the complete configuration (in order to have a more compact image the format of the state is hexadecimal). Here we can see that after the reset the shift register spends 16 clock cycles to reach its initial state as we expected.
+
+\section{LFSR}
+In order to prove the proper work of the LFSR we do a final test using a test-bench in VHDL and a C++ program. The program does in software the operations that are done in hardware by an LFSR. Both the test-bench and the program write their output on a file, the two file must be equal to ensure the correctness of the LFSR. Two script helps in doing this operations, one compiles and executes the C++ program, instead the other one compares the two output file using the UNIX tool \emph{diff}. The scripts work only in a UNIX-like environment.
+\subsection{LFSR Test-bench}
+\noindent The test-bench is like the previous one, but in this case the tap are setted at the following feedback polynomial: 
+\[1+x^{11}+x^{13}+x^{14}+x^{16}\]
+Then in terms of bit position the taps are: 10, 12, 13. Because of the fact that we start to count from 0. The bits 0 and 15 (i.e. the first one and the last one are always taps in a LFSR because the output is fed back to the input, but they are not taps in the sense that the must be XORed).
+\begin{lstlisting}
+	lfsr_test_process : process(clk_tb,reset_tb)
+	variable t : integer := 0;
+	begin
+		if(reset_tb='0') then
+			t:=0;
+			isTap_tb <= "000000000010110";
+			seed_tb <= "0000101011000110";
+		elsif (rising_edge(clk_tb)) then
+			if actual_state=seed_tb and t=0 then
+				t:=t+1;
+			elsif actual_state=seed_tb and t=1 then
+				end_sim <='0';
+			end if;
+		end if;
+	end process;
+	
+	write_file : process
+	variable BUF : line;
+	begin
+		loop
+			wait on clk_tb until clk_tb='1';
+			if reset_tb='1' then
+				WRITE(BUF,output_tb);
+				WRITEline(OUT_LFSR,BUF);
+			end if;
+		end loop;
+	end process;
+\end{lstlisting}
+
+\noindent The last process is in charge of writing the output on a file in order to compare it afterwards with the output of the C++ program.
+
+\noindent The statement at row 21 means that the output is written in the file on the rising edge of the clock (it waits until the clock changes from 0 to 1). Then at row 22 the if statement is needed in order to avoid the print of the output during the reset state.
+
+\subsection{C++ Test Program}
+The C++ program follows the same approach of the VHDL implementation. It is a Galois LFSR implemented in software. Anyway the implementation is not very performing because the target of the program is to test an already implemented hardware LFSR and not to implement in the most efficient way an LFSR.  
+\lstset{ %
+	language=C++ }
+\begin{lstlisting}	
+	int main()
+	{
+		// Initialization value
+		int seed[N] = {0,0,0,0,1,0,1,0,1,1,0,0,0,1,1,0}; 
+		// Actual state of the LFSR
+		int actual_state[N];
+		// Reset Phase: actual state is initialized to the seed value
+		for(int i = 0; i<N; i++)
+			actual_state[i] = seed[i];
+		do {
+			// Feedback bit
+			int lastBit = actual_state[N-1];
+			// Next LFSR state
+			int next_state[N];
+			// Shift operation
+			for(int i = 0; i<N; i++)
+			{
+				if(i!=0 && isTap(i-1))
+					next_state[i] = xorFunction(actual_state[i-1],lastBit);
+				else if(i==0)
+					next_state[i] = lastBit;
+				else
+					next_state[i] = actual_state[i-1];
+			}
+			
+			// The next state became the actual state
+			for(int i = 0; i<N; i++)
+				actual_state[i] = next_state[i];
+			
+			// Print the output
+			cout << lastBit << endl;
+		}while(!compare(actual_state,seed));
+		
+		/* Print the output of the last state (i.e. the first of the new cycle)
+		 * This is necessary to emulate the effect of the end_sim
+		 * in VHDL. When the condition in the while is true then
+		 * the simulation ends but in the ModelSim simulation
+	 	 * it ends after a clock (because end_sim goes to 0 after
+	   * a clock cycle). So the output of the first state of the 
+	 	 * new cycle must be considered*/
+		cout << actual_state[N-1] << endl;
+		return 0;
+	}
+\end{lstlisting}
+
+\noindent Only the main is shown, for the complete code see \begin{Verbatim}
+	/lfsr_cpp/lfsr_software.cpp
+\end{Verbatim}
+It's important to underline the statement at row 41. This statement is necessary in order to take into account the fact that the ModelSim simulation ends after a clock cycle, that is the period that the signal that is in charge of ending simulation needed to change from 0 to 1. More in the comment within the code.
+
+\subsection{Helper Scripts}
+The first script is in charge of compiling the code and redirecting the output in the file output.txt.
+\lstset{ %
+	language=sh }
+\begin{lstlisting}	
+	#!/bin/bash
+	g++ lfsr_software.cpp -o lfsr
+	./lfsr > output.txt
+\end{lstlisting}
+
+\noindent The second one is in charge of use the tool \emph{diff} to compare the output of the program and the output of the ModelSim simulation.
+\begin{lstlisting}	
+	#!/bin/bash
+	# Check if there are differences between two file
+	
+	VAR=`diff output.txt ../LFSR/ModelSim/LFSR_test/fileout.tv`
+	
+	if [ -z "$VAR" ]
+	then
+		echo "OK - NO DIFFERENCES"
+	else
+		echo $VAR
+	fi
+	
+	echo "Press a key to exit"
+	read input
+\end{lstlisting}
+
+\noindent At row 6 the output of diff is controlled and the condition in the if statement return true if and only if the command return null (so it means that there are no differences between the two files). Otherwise it means that there are some differences and so these are shown.
+
+\subsection{ModelSim Simulation}
+\subsection{Check The Simulation With C++ Program}
 \end{document}

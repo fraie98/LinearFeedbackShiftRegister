@@ -18,3 +18,10 @@
 \contentsline {chapter}{\numberline {4}Test-Plan}{12}{}%
 \contentsline {section}{\numberline {4.1}D-Flip-Flop Test}{12}{}%
 \contentsline {section}{\numberline {4.2}D-Flip-Flop with Tap Circuit Test}{13}{}%
+\contentsline {section}{\numberline {4.3}LFSR as Shift Register}{14}{}%
+\contentsline {section}{\numberline {4.4}LFSR}{14}{}%
+\contentsline {subsection}{\numberline {4.4.1}LFSR Test-bench}{15}{}%
+\contentsline {subsection}{\numberline {4.4.2}C++ Test Program}{15}{}%
+\contentsline {subsection}{\numberline {4.4.3}Helper Scripts}{16}{}%
+\contentsline {subsection}{\numberline {4.4.4}ModelSim Simulation}{16}{}%
+\contentsline {subsection}{\numberline {4.4.5}Check The Simulation With C++ Program}{16}{}%

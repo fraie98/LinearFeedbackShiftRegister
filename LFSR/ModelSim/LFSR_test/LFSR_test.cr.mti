@@ -1,4 +1,15 @@
-C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd
+C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Compiling entity lfsr_tb
+-- Compiling architecture bhv of lfsr_tb
+** Warning: C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd(11): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+
+} {} {}} C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO

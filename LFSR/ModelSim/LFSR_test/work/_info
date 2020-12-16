@@ -7,7 +7,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/Prova
+dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/LFSR_as_shift_reg_test
 Edff
 Z0 w1607452326
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -21,9 +21,9 @@ VFea_aA8Zg]U?`OCdcdbdn1
 !s100 ]5f2nYLa:H^ZQODV]<h[?1
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1607949447
+Z7 !s110 1608144435
 !i10b 1
-Z8 !s108 1607949447.000000
+Z8 !s108 1608144435.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 Z10 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 !i113 1
@@ -60,11 +60,11 @@ VP1?h9`3W9Rja<PlaZTe1D3
 !s100 S5gF;L>[3]5IiT3>gHZ9V1
 R6
 32
-R7
+Z16 !s110 1608144436
 !i10b 1
-R8
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd|
-Z17 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd|
+Z17 !s108 1608144436.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd|
+Z19 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff_tap_circuit.vhd|
 !i113 1
 R11
 R12
@@ -78,32 +78,32 @@ VdeK@hHJa:_:Mo]onUBkOk3
 !s100 W<hC]HZgN6j1BhWQnM:4W1
 R6
 32
-R7
-!i10b 1
-R8
 R16
+!i10b 1
 R17
+R18
+R19
 !i113 1
 R11
 R12
 Elfsr
-Z18 w1607868111
+Z20 w1607868111
 R1
 R2
 R3
-Z19 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
-Z20 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
+Z21 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
+Z22 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd
 l0
 L5
 VzamJi5k=M4ZRi?g@3Lk_m2
 !s100 knPShSPVoW1P?GWBKfL8l1
 R6
 32
-R7
+R16
 !i10b 1
-R8
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd|
-Z22 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd|
+R17
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd|
+Z24 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/lfsr.vhd|
 !i113 1
 R11
 R12
@@ -117,52 +117,52 @@ VfBaaa2UXfUm6fU3mzMdoj2
 !s100 4DQPPEG]j_BEB`790SlRX3
 R6
 32
-R7
+R16
 !i10b 1
-R8
-R21
-R22
+R17
+R23
+R24
 !i113 1
 R11
 R12
 Elfsr_tb
-Z23 w1607949406
-Z24 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z25 w1608112784
+Z26 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R1
 R3
-Z25 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd
-Z26 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd
+Z27 8C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd
+Z28 FC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd
 l0
 L6
 Vc_13<_gML:a6W_RhTJE8o2
 !s100 NaoaQj];kF1jNNCfdKYdf0
 R6
 32
-R7
+R16
 !i10b 1
-R8
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
-Z28 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
+R17
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
+Z30 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/tb/lfsr_tb.vhd|
 !i113 1
 R11
 R12
 Abhv
-R24
+R26
 R2
 R1
-Z29 DEx4 work 7 lfsr_tb 0 22 c_13<_gML:a6W_RhTJE8o2
-l40
+DEx4 work 7 lfsr_tb 0 22 c_13<_gML:a6W_RhTJE8o2
+l39
 L9
-Z30 Vi^mC?L_>U;CkVg2cX[Y^H2
-Z31 !s100 VO_VCiZWB?1FQ1:fD4[_f2
+VFX>j5L3bTPFHJ^`cBagHN0
+!s100 JHlG11[N:o?2TR2M_amni1
 R6
 32
-R7
+R16
 !i10b 1
-R8
-R27
-R28
+R17
+R29
+R30
 !i113 1
 R11
 R12

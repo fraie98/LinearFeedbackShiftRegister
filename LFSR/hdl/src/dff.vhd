@@ -17,9 +17,9 @@ architecture rtl of dff is
 begin
 	dff_p:process(reset,clk)
 	begin
-		-- Standard Reset Polarity 
-		-- if reset='0' then
-		if reset='1' then -- ZyBo Board Reset Polarity
+		
+		if reset='0' then 	 -- Standard Reset Polarity 
+		--if reset='1' then  -- ZyBo Board Reset Polarity
 			q <= set;
 		elsif(rising_edge(clk)) then
 			q <= d;

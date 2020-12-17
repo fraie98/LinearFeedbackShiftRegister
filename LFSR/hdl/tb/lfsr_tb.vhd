@@ -8,7 +8,9 @@ end lfsr_tb;
 
 architecture bhv of lfsr_tb is
 	
-	file OUT_LFSR : text is out "fileout.tv";
+	--file OUT_LFSR : text is out "fileout.tv";
+	--file OUT_LFSR : text is out "fileout1.tv";
+	file OUT_LFSR : text is out "fileout2.tv";
 
 	constant Nbit : positive := 16;
 	constant T_CLK   : time := 10 ns;
@@ -56,7 +58,9 @@ begin
 		if(reset_tb='0') then
 			t:=0;
 			isTap_tb <= "000000000010110";		-- 1 + x^11 + x^13 + x^14 + x^16 -> taps are 10 12 13
-			seed_tb <= "0000101011000110";
+			-- seed_tb <= "0000101011000110";			-- TEST 1 - OK
+			--seed_tb <= "1100101010100111";			-- TEST 2
+			seed_tb <= "0000000000000110";			-- TEST 3
 		elsif (rising_edge(clk_tb)) then
 			if actual_state=seed_tb and t=0 then
 				t:=t+1;

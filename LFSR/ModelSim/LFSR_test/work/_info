@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/LFSR_as_shift_reg_test
 Edff
-Z0 w1608195609
+Z0 w1608193447
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z3 dC:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/ModelSim/LFSR_test
@@ -21,9 +21,9 @@ VFea_aA8Zg]U?`OCdcdbdn1
 !s100 ]5f2nYLa:H^ZQODV]<h[?1
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1608195876
+Z7 !s110 1608193451
 !i10b 1
-Z8 !s108 1608195876.000000
+Z8 !s108 1608193451.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 Z10 !s107 C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/hdl/src/dff.vhd|
 !i113 1
@@ -126,7 +126,7 @@ R22
 R11
 R12
 Elfsr_tb
-Z23 w1608195872
+Z23 w1608193327
 Z24 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R1
@@ -154,8 +154,8 @@ R1
 Z29 DEx4 work 7 lfsr_tb 0 22 c_13<_gML:a6W_RhTJE8o2
 l41
 L9
-V<iS`0nP42[`82VAM^hzbi2
-!s100 D0mLnWfC]7P_iiRFYgRN=1
+Z30 V=K]5k1m?o1`iN81L2>d8n1
+Z31 !s100 3@HIXPM6FLVmlC2T3bUN00
 R6
 32
 R7

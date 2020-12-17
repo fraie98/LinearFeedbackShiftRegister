@@ -69,7 +69,9 @@ bool isTap(int i)
 int main()
 {
 	// Initialization value
-	int seed[N] = {0,0,0,0,1,0,1,0,1,1,0,0,0,1,1,0}; //0000101011000110
+	int seed[N] = {0,0,0,0,1,0,1,0,1,1,0,0,0,1,1,0}; 	// 0000101011000110 - TEST 1 - OK
+	//int seed[N] = {1,1,0,0,1,0,1,0,1,0,1,0,0,1,1,1}; 	// 1100101010100111 - TEST 2 - OK
+	//int seed[N] = {0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0}; 	// 0000000000000110 - TEST 3 - OK
 	// Actual state of the LFSR
 	int actual_state[N];
 	// Reset Phase: actual state is initialized to the seed value

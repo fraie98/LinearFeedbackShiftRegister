@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 17:44
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -824,16 +824,60 @@ File: img/vivado/warnings_synthesis.png Graphic file (type png)
 Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
 810.
 (pdftex.def)             Requested size: 325.81767pt x 39.14629pt.
- [22 <./img/vivado/warnings_synthesis.png>]
+<img/vivado/estimated_utilization1.png, id=145, 406.51875pt x 112.92188pt>
+File: img/vivado/estimated_utilization1.png Graphic file (type png)
+<use img/vivado/estimated_utilization1.png>
+Package pdftex.def Info: img/vivado/estimated_utilization1.png  used on input l
+ine 821.
+(pdftex.def)             Requested size: 325.21542pt x 90.3376pt.
+<img/vivado/estimated_utilization2.png, id=146, 405.76593pt x 101.62968pt>
+File: img/vivado/estimated_utilization2.png Graphic file (type png)
+<use img/vivado/estimated_utilization2.png>
+Package pdftex.def Info: img/vivado/estimated_utilization2.png  used on input l
+ine 826.
+(pdftex.def)             Requested size: 324.61317pt x 81.30385pt.
+<img/vivado/ioplanning.png, id=147, 1123.94907pt x 382.42876pt>
+File: img/vivado/ioplanning.png Graphic file (type png)
+<use img/vivado/ioplanning.png>
+Package pdftex.def Info: img/vivado/ioplanning.png  used on input line 833.
+(pdftex.def)             Requested size: 449.57167pt x 152.96878pt.
+
+Overfull \hbox (37.00668pt too wide) in paragraph at lines 833--834
+ [][] 
+ []
+
+<img/vivado/schematic_after_synthesis.png, id=148, 462.97969pt x 278.54062pt>
+File: img/vivado/schematic_after_synthesis.png Graphic file (type png)
+<use img/vivado/schematic_after_synthesis.png>
+Package pdftex.def Info: img/vivado/schematic_after_synthesis.png  used on inpu
+t line 840.
+(pdftex.def)             Requested size: 370.38425pt x 222.8328pt.
+<img/vivado/detail_of_schematic_after_synthesis.png, id=149, 737.00343pt x 322.
+20375pt>
+File: img/vivado/detail_of_schematic_after_synthesis.png Graphic file (type png
+)
+<use img/vivado/detail_of_schematic_after_synthesis.png>
+Package pdftex.def Info: img/vivado/detail_of_schematic_after_synthesis.png  us
+ed on input line 845.
+(pdftex.def)             Requested size: 589.60355pt x 257.76334pt.
+
+Overfull \hbox (177.03856pt too wide) in paragraph at lines 845--846
+ [][] 
+ []
+
+[22 <./img/vivado/warnings_synthesis.png> <./img/vivado/estimated_utilization1.
+png> <./img/vivado/estimated_utilization2.png>] [23 <./img/vivado/ioplanning.pn
+g> <./img/vivado/schematic_after_synthesis.png>] [24 <./img/vivado/detail_of_sc
+hematic_after_synthesis.png>]
 Chapter 6.
-[23
+[25
 
 ] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 17232 strings out of 479832
- 331259 string characters out of 2871058
+ 17262 strings out of 479832
+ 332433 string characters out of 2871058
  1076458 words of memory out of 3000000
- 33889 multiletter control sequences out of 15000+200000
+ 33914 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -867,9 +911,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (24 pages, 762980 bytes).
+Output written on LFSR.pdf (26 pages, 854200 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
+ 755 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -811,11 +811,40 @@ At the end of the synthesis we have 11 warning messages. We can see them in the 
 	\caption{Warning messages after synthesis}
 \end{figure}
 
-\noindent All the warning messages can be explained:
-\begin{itemize}
-	\item The first warning is related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output and if we want to use the VGA then the other bits must be setted manually to 0, because only the LSB of \emph{yq} is the real output.
-\end{itemize}
+\noindent The warning messages can be easily explained: they are related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output and if we want to use the VGA then the other bits must be setted manually to 0, because only the LSB of \emph{yq} is the real output.
 
-\subsection{Utilization}
+
+\subsection{Resources Utilization}
+The resources utilized in the synthesis are shown in the figure 5.7 and 5.8.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.8]{img/vivado/estimated_utilization1.png}
+	\caption{Graph representation of the estimated resource utilization}
+\end{figure}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.8]{img/vivado/estimated_utilization2.png}
+	\caption{Table representation of the estimated resource utilization}
+\end{figure}
+
+\subsection{I/O Planning}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.4]{img/vivado/ioplanning.png}
+	\caption{I/O Planning}
+\end{figure}
+
+\subsection{Schematic after synthesis}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.8]{img/vivado/schematic_after_synthesis.png}
+	\caption{Schematic after synthesis}
+\end{figure}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.8]{img/vivado/detail_of_schematic_after_synthesis.png}
+	\caption{Detail of a D-Flip-Flop with tap circuit in the schematic after synthesis}
+\end{figure}
+
 \chapter{Conclusion}
 \end{document}

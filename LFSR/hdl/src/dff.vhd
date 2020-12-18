@@ -18,8 +18,8 @@ begin
 	dff_p:process(reset,clk)
 	begin
 		
-		if reset='0' then 	 -- Standard Reset Polarity 
-		--if reset='1' then  -- ZyBo Board Reset Polarity
+		--if reset='0' then 	 -- Standard Reset Polarity 
+		if reset='1' then  -- ZyBo Board Reset Polarity
 			q <= set;
 		elsif(rising_edge(clk)) then
 			q <= d;

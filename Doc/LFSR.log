@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 11:20
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -695,10 +695,10 @@ Chapter 4.
 <img/tb/wave_dff_test.png, id=89, 822.82407pt x 97.11281pt>
 File: img/tb/wave_dff_test.png Graphic file (type png)
 <use img/tb/wave_dff_test.png>
-Package pdftex.def Info: img/tb/wave_dff_test.png  used on input line 438.
+Package pdftex.def Info: img/tb/wave_dff_test.png  used on input line 439.
 (pdftex.def)             Requested size: 423.60219pt x 88.25275pt.
 
-Overfull \hbox (11.0372pt too wide) in paragraph at lines 438--439
+Overfull \hbox (11.0372pt too wide) in paragraph at lines 439--440
  [][] 
  []
 
@@ -709,10 +709,10 @@ Overfull \hbox (11.0372pt too wide) in paragraph at lines 438--439
 File: img/tb/wave_dff_tap_circuit_test.png Graphic file (type png)
 <use img/tb/wave_dff_tap_circuit_test.png>
 Package pdftex.def Info: img/tb/wave_dff_tap_circuit_test.png  used on input li
-ne 474.
+ne 475.
 (pdftex.def)             Requested size: 423.60228pt x 88.25224pt.
 
-Overfull \hbox (11.0373pt too wide) in paragraph at lines 474--475
+Overfull \hbox (11.0373pt too wide) in paragraph at lines 475--476
  [][] 
  []
 
@@ -722,10 +722,10 @@ Overfull \hbox (11.0373pt too wide) in paragraph at lines 474--475
 File: img/tb/wave_lfsr_as_shift_reg_test_bin.png Graphic file (type png)
 <use img/tb/wave_lfsr_as_shift_reg_test_bin.png>
 Package pdftex.def Info: img/tb/wave_lfsr_as_shift_reg_test_bin.png  used on in
-put line 512.
+put line 513.
 (pdftex.def)             Requested size: 423.61105pt x 70.60588pt.
 
-Overfull \hbox (11.04607pt too wide) in paragraph at lines 512--513
+Overfull \hbox (11.04607pt too wide) in paragraph at lines 513--514
  [][] 
  []
 
@@ -733,17 +733,17 @@ Overfull \hbox (11.04607pt too wide) in paragraph at lines 512--513
 File: img/tb/wave_lfsr_as_shift_reg_test_hex.png Graphic file (type png)
 <use img/tb/wave_lfsr_as_shift_reg_test_hex.png>
 Package pdftex.def Info: img/tb/wave_lfsr_as_shift_reg_test_hex.png  used on in
-put line 520.
+put line 521.
 (pdftex.def)             Requested size: 423.59439pt x 70.60733pt.
 
-Overfull \hbox (11.0294pt too wide) in paragraph at lines 520--521
+Overfull \hbox (11.0294pt too wide) in paragraph at lines 521--522
  [][] 
  []
 
 [14 <./img/tb/wave_lfsr_as_shift_reg_test_bin.png> <./img/tb/wave_lfsr_as_shift
 _reg_test_hex.png>] [15]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-16.
+17.
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -754,10 +754,10 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 <img/tb/wave_lfsr_test2.png, id=110, 1415.2875pt x 117.43875pt>
 File: img/tb/wave_lfsr_test2.png Graphic file (type png)
 <use img/tb/wave_lfsr_test2.png>
-Package pdftex.def Info: img/tb/wave_lfsr_test2.png  used on input line 655.
+Package pdftex.def Info: img/tb/wave_lfsr_test2.png  used on input line 656.
 (pdftex.def)             Requested size: 451.82149pt x 63.53781pt.
 
-Overfull \hbox (39.2565pt too wide) in paragraph at lines 655--656
+Overfull \hbox (39.2565pt too wide) in paragraph at lines 656--657
  [][] 
  []
 
@@ -766,7 +766,7 @@ Overfull \hbox (39.2565pt too wide) in paragraph at lines 655--656
 File: img/tb/linuxConsoleExecution.png Graphic file (type png)
 <use img/tb/linuxConsoleExecution.png>
 Package pdftex.def Info: img/tb/linuxConsoleExecution.png  used on input line 6
-88.
+89.
 (pdftex.def)             Requested size: 410.72722pt x 160.59715pt.
  [17 <./img/tb/wave_lfsr_test2.png> <./img/tb/linuxConsoleExecution.png>]
 [18]
@@ -774,14 +774,14 @@ Chapter 5.
 [19
 
 ]
-<img/tb/wave_lfsr_wrapper_test.png, id=128, 1419.05156pt x 101.62968pt>
+<img/tb/wave_lfsr_wrapper_test.png, id=128, 1413.78188pt x 100.87688pt>
 File: img/tb/wave_lfsr_wrapper_test.png Graphic file (type png)
 <use img/tb/wave_lfsr_wrapper_test.png>
 Package pdftex.def Info: img/tb/wave_lfsr_wrapper_test.png  used on input line 
-751.
-(pdftex.def)             Requested size: 451.83221pt x 63.53699pt.
+752.
+(pdftex.def)             Requested size: 451.83699pt x 63.53737pt.
 
-Overfull \hbox (39.26723pt too wide) in paragraph at lines 751--752
+Overfull \hbox (39.272pt too wide) in paragraph at lines 752--753
  [][] 
  []
 
@@ -793,7 +793,7 @@ Chapter 6.
 Here is how much of TeX's memory you used:
  17200 strings out of 479832
  330244 string characters out of 2871058
- 1071458 words of memory out of 3000000
+ 1076458 words of memory out of 3000000
  33864 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -828,7 +828,7 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (22 pages, 710902 bytes).
+Output written on LFSR.pdf (22 pages, 710894 bytes).
 PDF statistics:
  715 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

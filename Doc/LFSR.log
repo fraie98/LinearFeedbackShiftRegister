@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 21:21
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -796,88 +796,100 @@ Overfull \hbox (24.06519pt too wide) in paragraph at lines 768--769
  [][] 
  []
 
+<img/vivado/detail_of_rtl_analysis.png, id=130, 505.89pt x 184.43906pt>
+File: img/vivado/detail_of_rtl_analysis.png Graphic file (type png)
+<use img/vivado/detail_of_rtl_analysis.png>
+Package pdftex.def Info: img/vivado/detail_of_rtl_analysis.png  used on input l
+ine 776.
+(pdftex.def)             Requested size: 354.12057pt x 129.10645pt.
 [20 <./img/tb/wave_lfsr_wrapper_test.png> <./img/vivado/rtl_analysis_schematic.
 PNG>]
-<img/vivado/timing_summary1.png, id=135, 649.67719pt x 142.28156pt>
+<img/vivado/timing_summary1.png, id=136, 649.67719pt x 142.28156pt>
 File: img/vivado/timing_summary1.png Graphic file (type png)
 <use img/vivado/timing_summary1.png>
-Package pdftex.def Info: img/vivado/timing_summary1.png  used on input line 782
+Package pdftex.def Info: img/vivado/timing_summary1.png  used on input line 788
 .
 (pdftex.def)             Requested size: 389.80931pt x 85.36958pt.
-<img/vivado/timing_summary2.png, id=136, 648.17157pt x 147.55125pt>
+<img/vivado/timing_summary2.png, id=137, 648.17157pt x 147.55125pt>
 File: img/vivado/timing_summary2.png Graphic file (type png)
 <use img/vivado/timing_summary2.png>
-Package pdftex.def Info: img/vivado/timing_summary2.png  used on input line 790
+Package pdftex.def Info: img/vivado/timing_summary2.png  used on input line 796
 .
 (pdftex.def)             Requested size: 388.90594pt x 88.53142pt.
-<img/vivado/timing_summary3.png, id=137, 647.41875pt x 143.03438pt>
+<img/vivado/timing_summary3.png, id=138, 648.92438pt x 110.66344pt>
 File: img/vivado/timing_summary3.png Graphic file (type png)
 <use img/vivado/timing_summary3.png>
-Package pdftex.def Info: img/vivado/timing_summary3.png  used on input line 797
+Package pdftex.def Info: img/vivado/timing_summary3.png  used on input line 803
 .
-(pdftex.def)             Requested size: 388.45424pt x 85.82127pt.
- [21 <./img/vivado/timing_summary1.png> <./img/vivado/timing_summary2.png> <./i
-mg/vivado/timing_summary3.png>]
-<img/vivado/warnings_synthesis.png, id=144, 407.27156pt x 48.93282pt>
-File: img/vivado/warnings_synthesis.png Graphic file (type png)
-<use img/vivado/warnings_synthesis.png>
-Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
-810.
-(pdftex.def)             Requested size: 325.81767pt x 39.14629pt.
-<img/vivado/estimated_utilization1.png, id=145, 406.51875pt x 112.92188pt>
-File: img/vivado/estimated_utilization1.png Graphic file (type png)
-<use img/vivado/estimated_utilization1.png>
-Package pdftex.def Info: img/vivado/estimated_utilization1.png  used on input l
-ine 821.
-(pdftex.def)             Requested size: 325.21542pt x 90.3376pt.
-<img/vivado/estimated_utilization2.png, id=146, 405.76593pt x 101.62968pt>
-File: img/vivado/estimated_utilization2.png Graphic file (type png)
-<use img/vivado/estimated_utilization2.png>
-Package pdftex.def Info: img/vivado/estimated_utilization2.png  used on input l
-ine 826.
-(pdftex.def)             Requested size: 324.61317pt x 81.30385pt.
-<img/vivado/ioplanning.png, id=147, 1123.94907pt x 382.42876pt>
-File: img/vivado/ioplanning.png Graphic file (type png)
-<use img/vivado/ioplanning.png>
-Package pdftex.def Info: img/vivado/ioplanning.png  used on input line 833.
-(pdftex.def)             Requested size: 449.57167pt x 152.96878pt.
+(pdftex.def)             Requested size: 454.24397pt x 77.46385pt.
 
-Overfull \hbox (37.00668pt too wide) in paragraph at lines 833--834
+Overfull \hbox (41.67899pt too wide) in paragraph at lines 803--804
  [][] 
  []
 
-<img/vivado/schematic_after_synthesis.png, id=148, 462.97969pt x 278.54062pt>
+[21 <./img/vivado/detail_of_rtl_analysis.png> <./img/vivado/timing_summary1.png
+> <./img/vivado/timing_summary2.png>]
+<img/vivado/ioplanning.png, id=145, 1123.94907pt x 382.42876pt>
+File: img/vivado/ioplanning.png Graphic file (type png)
+<use img/vivado/ioplanning.png>
+Package pdftex.def Info: img/vivado/ioplanning.png  used on input line 813.
+(pdftex.def)             Requested size: 449.57167pt x 152.96878pt.
+
+Overfull \hbox (37.00668pt too wide) in paragraph at lines 813--814
+ [][] 
+ []
+
+<img/vivado/warnings_synthesis.png, id=146, 407.27156pt x 48.93282pt>
+File: img/vivado/warnings_synthesis.png Graphic file (type png)
+<use img/vivado/warnings_synthesis.png>
+Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
+824.
+(pdftex.def)             Requested size: 366.541pt x 44.03911pt.
+[22 <./img/vivado/timing_summary3.png> <./img/vivado/ioplanning.png> <./img/viv
+ado/warnings_synthesis.png>]
+<img/vivado/estimated_utilization1.png, id=153, 406.51875pt x 112.92188pt>
+File: img/vivado/estimated_utilization1.png Graphic file (type png)
+<use img/vivado/estimated_utilization1.png>
+Package pdftex.def Info: img/vivado/estimated_utilization1.png  used on input l
+ine 837.
+(pdftex.def)             Requested size: 365.86348pt x 101.62872pt.
+<img/vivado/estimated_utilization2.png, id=154, 405.76593pt x 101.62968pt>
+File: img/vivado/estimated_utilization2.png Graphic file (type png)
+<use img/vivado/estimated_utilization2.png>
+Package pdftex.def Info: img/vivado/estimated_utilization2.png  used on input l
+ine 846.
+(pdftex.def)             Requested size: 365.18596pt x 91.46585pt.
+<img/vivado/schematic_after_synthesis.png, id=155, 462.97969pt x 278.54062pt>
 File: img/vivado/schematic_after_synthesis.png Graphic file (type png)
 <use img/vivado/schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/schematic_after_synthesis.png  used on inpu
-t line 840.
+t line 859.
 (pdftex.def)             Requested size: 370.38425pt x 222.8328pt.
-<img/vivado/detail_of_schematic_after_synthesis.png, id=149, 737.00343pt x 322.
+<img/vivado/detail_of_schematic_after_synthesis.png, id=156, 737.00343pt x 322.
 20375pt>
 File: img/vivado/detail_of_schematic_after_synthesis.png Graphic file (type png
 )
 <use img/vivado/detail_of_schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/detail_of_schematic_after_synthesis.png  us
-ed on input line 845.
-(pdftex.def)             Requested size: 589.60355pt x 257.76334pt.
+ed on input line 864.
+(pdftex.def)             Requested size: 442.20547pt x 193.32373pt.
 
-Overfull \hbox (177.03856pt too wide) in paragraph at lines 845--846
+Overfull \hbox (29.64049pt too wide) in paragraph at lines 864--865
  [][] 
  []
 
-[22 <./img/vivado/warnings_synthesis.png> <./img/vivado/estimated_utilization1.
-png> <./img/vivado/estimated_utilization2.png>] [23 <./img/vivado/ioplanning.pn
-g> <./img/vivado/schematic_after_synthesis.png>] [24 <./img/vivado/detail_of_sc
-hematic_after_synthesis.png>]
+[23 <./img/vivado/estimated_utilization1.png> <./img/vivado/estimated_utilizati
+on2.png> <./img/vivado/schematic_after_synthesis.png>] [24 <./img/vivado/detail
+_of_schematic_after_synthesis.png>]
 Chapter 6.
 [25
 
 ] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 17262 strings out of 479832
- 332433 string characters out of 2871058
+ 17268 strings out of 479832
+ 332663 string characters out of 2871058
  1076458 words of memory out of 3000000
- 33914 multiletter control sequences out of 15000+200000
+ 33919 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -911,9 +923,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (26 pages, 854200 bytes).
+Output written on LFSR.pdf (26 pages, 866951 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
+ 759 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

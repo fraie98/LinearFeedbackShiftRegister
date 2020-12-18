@@ -724,10 +724,10 @@ In order to synthesize the LFSR on the FPGA we have to do some trade-offs. This 
 	\item reset: 1 bit
 \end{itemize}  
 
-\noindent So we would need 32 input ports and we have not. To resolve this issue we do the following trade-offs:
+\noindent So we would need 32 input ports and we have not them. To resolve this issue we do the following trade-offs:
 \begin{itemize}
-	\item The input for decide which bits are taps or not is given by the wrapper and it is a pre-determined value (the same seen in test-plan, that is the one of the requirements).
-	\item Only a part of the seed value is editable, this part will be connected with the 4 slides switches and a feedback of which slides are active is given to the user using 4 leds provided by the board. The rest of the seed is pre-determined with a non-zero value, so even if the user doesn't change the slides, the LFSR works properly because in any case the seed is a non-zero value.
+	\item The input for decide which bits are taps or not, is given by the wrapper and it is a pre-determined value (the same seen in test-plan, that is the one of the requirements).
+	\item Only a part of the seed value is editable, this part will be connected with the 4 slides switches and a feedback of which slides are active, is given to the user using 4 leds provided by the board. The rest of the seed is pre-determined with a non-zero value, so even if the user doesn't change the slides, the LFSR works properly because in any case the seed is a non-zero value.
 	
 	\noindent
 	So the seed will be \emph{userInput + 101011000110} (where + means concatenation).
@@ -759,10 +759,10 @@ In order to synthesize the LFSR on the FPGA we have to do some trade-offs. This 
 	\item The output (only the LSB) is saved in a file in order to be compared with the C++ program output.
 	\item Due to the fact that now there is no way to know the internal state of the LFSR we stop the simulation after 65536 clock cycles.
 \end{itemize}
-Then, after ModelSim simulation, we can use the scripts (changing the paths of the file) to check the simulation output file. The correctness of the wrapper implementation is ensured by the fact that the wrapper doesn't modify the job of the standerd LFSR (that is emulated by the C++ program) because the simulation output file and the C++ output file have no differences.
+Then, after ModelSim simulation, we can use the scripts (changing the paths of the file) to check the simulation output file. The correctness of the wrapper implementation is ensured by the fact that the wrapper doesn't modify the job of the standard LFSR (that is emulated by the C++ program) because the simulation output file and the C++ output file have no differences.
 
 \section{RTL Analysis}
-The first step ov Vivado workflow is to perform the RTL analysis of our device. The output of this step is a schematic of the LFSR.
+The first step of Vivado workflow is to perform the RTL analysis of our device. The output of this step is a schematic of the LFSR.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[scale=0.5]{img/vivado/rtl_analysis_schematic.PNG}
@@ -771,12 +771,18 @@ The first step ov Vivado workflow is to perform the RTL analysis of our device. 
 
 \noindent In the figure 5.2 we can see the schematic, we can recognize the inputs and the output and the fact that some of them are initialized to constant values (the connections to ground and to supply).
 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.7]{img/vivado/detail_of_rtl_analysis.png}
+	\caption{Detail of a D-Flip-Flop of RTL Analysis Schematic}
+\end{figure}
+
 \newpage
 
 \section{Synthesis}
 With this second step we map our structure on the target technology.
 \subsection{Clock Period Setting}
-In this step we have to set the clock timing. We try to get a clock frequency of 125 MHz (8 ns). If we run the synthesis with this clock frequency we obtain the timing summary in figure 5.3.
+In this step we have to set the clock timing. We try to get a clock frequency of 125 MHz (8 ns). If we run the synthesis with this clock frequency we obtain the timing summary in figure 5.4.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[scale=0.6]{img/vivado/timing_summary1.png}
@@ -784,57 +790,70 @@ In this step we have to set the clock timing. We try to get a clock frequency of
 \end{figure}
 
 
-\noindent We can see that the slack is 6,357 ns, so this means that our device can work at an higher frequency. So we edit the clock period to 5 ns. In this case we have the timing summary in figure 5.4.
+\noindent We can see that the slack is 6,357 ns, so this means that our device can work at an higher frequency. So we edit the clock period to 5 ns. In this case we have the timing summary in figure 5.5.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[scale=0.6]{img/vivado/timing_summary2.png}
 	\caption{Design Timing Summary with period clock equal to 5 ns}
 \end{figure}
 
-\noindent So due to the fact that the slack is positive also now, we reduce the clock period to 2.7 ns so 370 Mhz. So we have the Design Timing Summary shown in figure 5.5.
+\noindent So due to the fact that the slack is positive also now, we reduce the clock period to 2.7 ns so 370 Mhz. Also in this case the Worst Negative Slack is positive, then we set a clock period equal to 2.5 ns and so we have a clock frequency equal to 400 MHz. The resulting Design Timing Summary is shown in figure 5.6.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.6]{img/vivado/timing_summary3.png}
-	\caption{Design Timing Summary with period clock equal to 2.7 ns}
+	\includegraphics[scale=0.7]{img/vivado/timing_summary3.png}
+	\caption{Design Timing Summary with period clock equal to 2.5 ns}
 \end{figure}
 
-\noindent We can reduce also now the clock period but, in order to have a bit margin of error, we maintain the clock period to 2.7 ns and so our clock frequency is 370 MHz (370.37 MHz to be precise).
-
+\noindent We can reduce also now the clock period but, in order to have a bit margin of error, we maintain this clock period. Repeating this procedure we arrive at the point that the minimum clock period is 2.1 ns and so the maximum clock frequency achievable is 476 MHz.
 \newpage
+\subsection{I/O Planning}
+The next step is to do the I/O planning: this means that we have to connect our inputs and our outputs to the pins of the board. We can see it in the figure 5.7.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.4]{img/vivado/ioplanning.png}
+	\caption{I/O Planning}%\end{figure}
+\end{figure}
+
+
 \subsection{Warning Message Analysis}
-At the end of the synthesis we have 11 warning messages. We can see them in the figure 5.6.
+At the end of the synthesis we have 11 warning messages. We can see them in the figure 5.8.
 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.8]{img/vivado/warnings_synthesis.png}
+	\includegraphics[scale=0.9]{img/vivado/warnings_synthesis.png}
 	\caption{Warning messages after synthesis}
 \end{figure}
 
 \noindent The warning messages can be easily explained: they are related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output and if we want to use the VGA then the other bits must be setted manually to 0, because only the LSB of \emph{yq} is the real output.
 
+\newpage
 
-\subsection{Resources Utilization}
-The resources utilized in the synthesis are shown in the figure 5.7 and 5.8.
+\subsection{Estimated Resources Utilization}
+The estimated resources utilized are shown in the figure 5.9 and 5.10.
+
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.8]{img/vivado/estimated_utilization1.png}
+	\includegraphics[scale=0.9]{img/vivado/estimated_utilization1.png}
 	\caption{Graph representation of the estimated resource utilization}
 \end{figure}
+
+
+\noindent In the figure 5.9 we can see that the most estimated utilization is about the IO resource, instead we use a very low number of the available flip-flops and LUTs.
+
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.8]{img/vivado/estimated_utilization2.png}
+	\includegraphics[scale=0.9]{img/vivado/estimated_utilization2.png}
 	\caption{Table representation of the estimated resource utilization}
 \end{figure}
 
-\subsection{I/O Planning}
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=0.4]{img/vivado/ioplanning.png}
-	\caption{I/O Planning}
-\end{figure}
+
+\noindent In particular we can see in the figure 5.10 that we use 32 flip-flops and 14 LUT with an utilization that is less than 0.1\%
+
+
 
 \subsection{Schematic after synthesis}
+After the synthesis we can see a schematic of the LFSR mapped on the target technology, so we can see how our logic is translated in terms of flip-flops and LUTs. In the figure 5.11 we can see the schematic after synthesis and in the figure 5.12 the detail of a flip flop.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[scale=0.8]{img/vivado/schematic_after_synthesis.png}
@@ -842,9 +861,11 @@ The resources utilized in the synthesis are shown in the figure 5.7 and 5.8.
 \end{figure}
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.8]{img/vivado/detail_of_schematic_after_synthesis.png}
+	\includegraphics[scale=0.6]{img/vivado/detail_of_schematic_after_synthesis.png}
 	\caption{Detail of a D-Flip-Flop with tap circuit in the schematic after synthesis}
 \end{figure}
 
+\section{Implementation}
+Scrivere che anche dopo l'implementazione lo slack è ancora positivo e mostrare il power report e commentarlo. Dire inoltre che le estimated resource sono correte e sono le stess dopo l'implementazione
 \chapter{Conclusion}
 \end{document}

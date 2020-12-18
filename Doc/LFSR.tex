@@ -728,6 +728,10 @@ In order to synthesize the LFSR on the FPGA we have to do some trade-offs. This 
 \begin{itemize}
 	\item The input for decide which bits are taps or not is given by the wrapper and it is a pre-determined value (the same seen in test-plan, that is the one of the requirements).
 	\item Only a part of the seed value is editable, this part will be connected with the 4 slides switches and a feedback of which slides are active is given to the user using 4 leds provided by the board. The rest of the seed is pre-determined with a non-zero value, so even if the user doesn't change the slides, the LFSR works properly because in any case the seed is a non-zero value.
+	
+	\noindent
+	So the seed will be \emph{userInput + 101011000110} (where + means concatenation).
+	
 	\item The reset value is connected with one of the push buttons. This means that we have to invert the polarity of the reset, because when a user pushes the button this means that a $V_{cc}$ to the reset is given, so the reset is asserted when the push buttons is pressed only if the polarity of the reset is inverted. In order to resolve this issue, the polarity of the dff must be inverted.
 \end{itemize}
 
@@ -751,12 +755,67 @@ In order to synthesize the LFSR on the FPGA we have to do some trade-offs. This 
 	\centering
 	\includegraphics[width=.64\textheight, height=.09\textheight]{img/tb/wave_lfsr_wrapper_test.png}
 	\caption{Part of the simulation of the lfsr wrapper}
-\end{figure}
+	\end{figure}
 	\item The output (only the LSB) is saved in a file in order to be compared with the C++ program output.
 	\item Due to the fact that now there is no way to know the internal state of the LFSR we stop the simulation after 65536 clock cycles.
 \end{itemize}
 Then, after ModelSim simulation, we can use the scripts (changing the paths of the file) to check the simulation output file. The correctness of the wrapper implementation is ensured by the fact that the wrapper doesn't modify the job of the standerd LFSR (that is emulated by the C++ program) because the simulation output file and the C++ output file have no differences.
-%\section{}
 
+\section{RTL Analysis}
+The first step ov Vivado workflow is to perform the RTL analysis of our device. The output of this step is a schematic of the LFSR.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.5]{img/vivado/rtl_analysis_schematic.PNG}
+	\caption{RTL Analysis Schematic}
+\end{figure}
+
+\noindent In the figure 5.2 we can see the schematic, we can recognize the inputs and the output and the fact that some of them are initialized to constant values (the connections to ground and to supply).
+
+\newpage
+
+\section{Synthesis}
+With this second step we map our structure on the target technology.
+\subsection{Clock Period Setting}
+In this step we have to set the clock timing. We try to get a clock frequency of 125 MHz (8 ns). If we run the synthesis with this clock frequency we obtain the timing summary in figure 5.3.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.6]{img/vivado/timing_summary1.png}
+	\caption{Design Timing Summary with period clock equal to 8 ns}
+\end{figure}
+
+
+\noindent We can see that the slack is 6,357 ns, so this means that our device can work at an higher frequency. So we edit the clock period to 5 ns. In this case we have the timing summary in figure 5.4.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.6]{img/vivado/timing_summary2.png}
+	\caption{Design Timing Summary with period clock equal to 5 ns}
+\end{figure}
+
+\noindent So due to the fact that the slack is positive also now, we reduce the clock period to 2.7 ns so 370 Mhz. So we have the Design Timing Summary shown in figure 5.5.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.6]{img/vivado/timing_summary3.png}
+	\caption{Design Timing Summary with period clock equal to 2.7 ns}
+\end{figure}
+
+\noindent We can reduce also now the clock period but, in order to have a bit margin of error, we maintain the clock period to 2.7 ns and so our clock frequency is 370 MHz (370.37 MHz to be precise).
+
+\newpage
+\subsection{Warning Message Analysis}
+At the end of the synthesis we have 11 warning messages. We can see them in the figure 5.6.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.8]{img/vivado/warnings_synthesis.png}
+	\caption{Warning messages after synthesis}
+\end{figure}
+
+\noindent All the warning messages can be explained:
+\begin{itemize}
+	\item The first warning is related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output and if we want to use the VGA then the other bits must be setted manually to 0, because only the LSB of \emph{yq} is the real output.
+\end{itemize}
+
+\subsection{Utilization}
 \chapter{Conclusion}
 \end{document}

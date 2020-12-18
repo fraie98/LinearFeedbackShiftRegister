@@ -15,7 +15,7 @@ entity dff is
 
 architecture rtl of dff is
 begin
-	dff_p:process(reset,clk)
+	dff_p:process(reset,clk,set)
 	begin
 		
 		--if reset='0' then 	 -- Standard Reset Polarity 

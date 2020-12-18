@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 13:02
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -778,23 +778,62 @@ Chapter 5.
 File: img/tb/wave_lfsr_wrapper_test.png Graphic file (type png)
 <use img/tb/wave_lfsr_wrapper_test.png>
 Package pdftex.def Info: img/tb/wave_lfsr_wrapper_test.png  used on input line 
-752.
+756.
 (pdftex.def)             Requested size: 451.83699pt x 63.53737pt.
 
-Overfull \hbox (39.272pt too wide) in paragraph at lines 752--753
+Overfull \hbox (39.272pt too wide) in paragraph at lines 756--757
  [][] 
  []
 
-[20 <./img/tb/wave_lfsr_wrapper_test.png>]
+<img/vivado/rtl_analysis_schematic.PNG, id=129, 873.2625pt x 369.63094pt>
+File: img/vivado/rtl_analysis_schematic.PNG Graphic file (type png)
+<use img/vivado/rtl_analysis_schematic.PNG>
+Package pdftex.def Info: img/vivado/rtl_analysis_schematic.PNG  used on input l
+ine 768.
+(pdftex.def)             Requested size: 436.63017pt x 184.815pt.
+
+Overfull \hbox (24.06519pt too wide) in paragraph at lines 768--769
+ [][] 
+ []
+
+[20 <./img/tb/wave_lfsr_wrapper_test.png> <./img/vivado/rtl_analysis_schematic.
+PNG>]
+<img/vivado/timing_summary1.png, id=135, 649.67719pt x 142.28156pt>
+File: img/vivado/timing_summary1.png Graphic file (type png)
+<use img/vivado/timing_summary1.png>
+Package pdftex.def Info: img/vivado/timing_summary1.png  used on input line 782
+.
+(pdftex.def)             Requested size: 389.80931pt x 85.36958pt.
+<img/vivado/timing_summary2.png, id=136, 648.17157pt x 147.55125pt>
+File: img/vivado/timing_summary2.png Graphic file (type png)
+<use img/vivado/timing_summary2.png>
+Package pdftex.def Info: img/vivado/timing_summary2.png  used on input line 790
+.
+(pdftex.def)             Requested size: 388.90594pt x 88.53142pt.
+<img/vivado/timing_summary3.png, id=137, 647.41875pt x 143.03438pt>
+File: img/vivado/timing_summary3.png Graphic file (type png)
+<use img/vivado/timing_summary3.png>
+Package pdftex.def Info: img/vivado/timing_summary3.png  used on input line 797
+.
+(pdftex.def)             Requested size: 388.45424pt x 85.82127pt.
+ [21 <./img/vivado/timing_summary1.png> <./img/vivado/timing_summary2.png> <./i
+mg/vivado/timing_summary3.png>]
+<img/vivado/warnings_synthesis.png, id=144, 407.27156pt x 48.93282pt>
+File: img/vivado/warnings_synthesis.png Graphic file (type png)
+<use img/vivado/warnings_synthesis.png>
+Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
+810.
+(pdftex.def)             Requested size: 325.81767pt x 39.14629pt.
+ [22 <./img/vivado/warnings_synthesis.png>]
 Chapter 6.
-[21
+[23
 
 ] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 17200 strings out of 479832
- 330244 string characters out of 2871058
+ 17232 strings out of 479832
+ 331259 string characters out of 2871058
  1076458 words of memory out of 3000000
- 33864 multiletter control sequences out of 15000+200000
+ 33889 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -828,9 +867,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (22 pages, 710894 bytes).
+Output written on LFSR.pdf (24 pages, 762980 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
+ 736 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

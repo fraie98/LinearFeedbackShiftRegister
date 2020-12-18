@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/franc/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10340-DESKTOP-PGG00VI/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -45,6 +42,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.srcs/constrs_1/new/constr.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.srcs/constrs_1/new/constr.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

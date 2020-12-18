@@ -711,8 +711,51 @@ For a complete test plan we have to test all the $2^{16}-1$ (Remember that the s
 \end{itemize}
 Each test has been performed as the one previously explained and each one has given a successfully output.
 \chapter{Logic Synthesis}
-Ricordarsi di scrivere che si deve invertire la polarità del reset
+In this chapter we discuss the Logic Synthesis of the previously implemented LFSR, with Xilinx Vivado, for ZyBo Board (ZYNQ XC7Z010-1CLG400C).
 
+\section{LFSR Wrapper}
+In order to synthesize the LFSR on the FPGA we have to do some trade-offs. This because the ZyBo Board has only 4 push buttons and 4 slide switches as input. So we have to implement a wrapper that reduce the number if inputs of our LFSR.
+
+\noindent Before the implementation we have the following inputs\footnote{The clock is not considered because it is not an input given by the user}:
+\begin{itemize}
+	\item isTap: 15 bits
+	\item seed: 16 bits
+	\item reset: 1 bit
+\end{itemize}  
+
+\noindent So we would need 32 input ports and we have not. To resolve this issue we do the following trade-off:
+\begin{itemize}
+	\item The input for decide which bits are taps or not is given by the wrapper and it is a pre-determined value (the same seen in test-plan, that is the one of the requirements).
+	\item Only a part of the seed value is editable, this part will be connected with the 4 slides switches and a feedback of which slides are active is given to the user using 4 leds provided by the board. The rest of the seed is pre-determined with a non-zero value, so even if the user doesn't change the slides, the LFSR works properly because in any case the seed is a non-zero value.
+	\item The reset value is connected with one of the push buttons. This means that we have to invert the polarity of the reset, because when a user pushes the button this means that a $V_{cc}$ to the reset is given, so the reset is asserted when the push buttons is pressed only if the polarity of the reset is inverted. In order to resolve this issue the polarity of the reset is inverted in the wrapper.
+\end{itemize}
+
+\noindent Then we have to resolve also the issue about the output. In this case we have as output only a bit, so if we want to show the result on a screen we have to use the VGA output, in order to do this we can use 6 bits of DAC on the GRN channel. Thus, we assign the output bit to the less significant bit of these 6 and the others are setted to 0.
+
+\noindent To see the wrapper VHDL code see the correspondent VHDL file:
+\begin{Verbatim}
+	/LFSR/hdl/src/lfsr_wrapper.vhd
+\end{Verbatim}
+
+\subsection{Wrapper Test}
+\noindent Also the wrapper has been tested using the test-bench and the comparison with the C++ program. The wrapper test bench is in the path:
+\begin{Verbatim}
+	/LFSR/hdl/tb/lfsr_wrapper_tb.vhd
+\end{Verbatim}
+
+\noindent Some observations about it are needed:
+\begin{itemize}
+	\item The reset polarity is inverted in order to emulate the behaviour of the push buttons (as we can see in the figure 5.1).
+	\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.64\textheight, height=.09\textheight]{img/tb/wave_lfsr_wrapper_test.png}
+	\caption{Part of the simulation of the lfsr wrapper}
+\end{figure}
+	\item The output (only the LSB) is saved in a file in order to be compared with the C++ program output.
+	\item Due to the fact that now there is no way to know the internal state of the LFSR we stop the simulation after 65536 clock cycles.
+\end{itemize}
+Then, after ModelSim simulation, we can use the scripts (changing the paths of the file) to check the simulation output file. The correctness of the wrapper implementation is ensured by the fact that the wrapper doesn't modify the job of the standerd LFSR (that is emulated by the C++ program) because the simulation output file and the C++ output file have no differences.
+%\section{}
 
 \chapter{Conclusion}
 \end{document}

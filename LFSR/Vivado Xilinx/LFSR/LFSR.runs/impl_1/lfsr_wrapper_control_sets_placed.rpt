@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Dec 18 21:03:04 2020
+| Date         : Sat Dec 19 11:15:51 2020
 | Host         : DESKTOP-PGG00VI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lfsr_wrapper_control_sets_placed.rpt
 | Design       : lfsr_wrapper
@@ -64,14 +64,14 @@ Table of Contents
 |  LFSR_MAPPING/GEN[1].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1__1_n_0 |               | LFSR_MAPPING/GEN[1].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__0_n_0 |                1 |              1 |
 |  LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1__0_n_0 |               | LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__1_n_0 |                1 |              1 |
 |  LFSR_MAPPING/GEN[3].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1_n_0    |               | LFSR_MAPPING/GEN[3].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__2_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[0].FIRST.FF1/internal_dff/q_reg_LDC_i_1__2_n_0    |                1 |              1 |
 |  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[0].FIRST.FF1/internal_dff/q_reg_LDC_i_2_n_0       |                1 |              1 |
-|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[0].FIRST.FF1/internal_dff/q_reg_LDC_i_1__2_n_0    |                1 |              1 |
 |  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[1].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__0_n_0 |                1 |              1 |
 |  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[1].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1__1_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1__0_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[3].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1_n_0    |                1 |              1 |
 |  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[3].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__2_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1__0_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[2].INTERNAL.FFI/internal_dff/q_reg_LDC_i_2__1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                                                      |               | LFSR_MAPPING/GEN[3].INTERNAL.FFI/internal_dff/q_reg_LDC_i_1_n_0    |                1 |              1 |
 |  clk_IBUF_BUFG                                                      |               | reset_IBUF                                                         |                2 |             12 |
 +---------------------------------------------------------------------+---------------+--------------------------------------------------------------------+------------------+----------------+
 

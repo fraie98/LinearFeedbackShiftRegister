@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  18 DEC 2020 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  19 DEC 2020 11:18
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -879,17 +879,46 @@ Overfull \hbox (29.64049pt too wide) in paragraph at lines 864--865
  []
 
 [23 <./img/vivado/estimated_utilization1.png> <./img/vivado/estimated_utilizati
-on2.png> <./img/vivado/schematic_after_synthesis.png>] [24 <./img/vivado/detail
-_of_schematic_after_synthesis.png>]
+on2.png> <./img/vivado/schematic_after_synthesis.png>]
+<img/vivado/fpga.png, id=163, 254.45062pt x 385.44pt>
+File: img/vivado/fpga.png Graphic file (type png)
+<use img/vivado/fpga.png>
+Package pdftex.def Info: img/vivado/fpga.png  used on input line 875.
+(pdftex.def)             Requested size: 193.38058pt x 292.93156pt.
+<img/vivado/fpga_detail.png, id=164, 627.84563pt x 380.92313pt>
+File: img/vivado/fpga_detail.png Graphic file (type png)
+<use img/vivado/fpga_detail.png>
+Package pdftex.def Info: img/vivado/fpga_detail.png  used on input line 885.
+(pdftex.def)             Requested size: 376.71028pt x 228.55562pt.
+ [24 <./img/vivado/detail_of_schematic_after_synthesis.png> <./img/vivado/fpga.
+png>]
+<img/vivado/implementation_timing.png, id=171, 653.44125pt x 118.94438pt>
+File: img/vivado/implementation_timing.png Graphic file (type png)
+<use img/vivado/implementation_timing.png>
+Package pdftex.def Info: img/vivado/implementation_timing.png  used on input li
+ne 894.
+(pdftex.def)             Requested size: 457.40576pt x 83.26048pt.
+
+Overfull \hbox (44.84077pt too wide) in paragraph at lines 894--895
+ [][] 
+ []
+
+<img/vivado/utilization.png, id=172, 427.5975pt x 145.29282pt>
+File: img/vivado/utilization.png Graphic file (type png)
+<use img/vivado/utilization.png>
+Package pdftex.def Info: img/vivado/utilization.png  used on input line 903.
+(pdftex.def)             Requested size: 299.31621pt x 101.70427pt.
+[25 <./img/vivado/fpga_detail.png> <./img/vivado/implementation_timing.png> <./
+img/vivado/utilization.png>] [26]
 Chapter 6.
-[25
+[27
 
 ] (LFSR.aux) ) 
 Here is how much of TeX's memory you used:
- 17268 strings out of 479832
- 332663 string characters out of 2871058
+ 17292 strings out of 479832
+ 333337 string characters out of 2871058
  1076458 words of memory out of 3000000
- 33919 multiletter control sequences out of 15000+200000
+ 33939 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -923,9 +952,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (26 pages, 866951 bytes).
+Output written on LFSR.pdf (28 pages, 907011 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
+ 774 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

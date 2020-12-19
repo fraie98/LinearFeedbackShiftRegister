@@ -60,24 +60,17 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/franc/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8748-DESKTOP-PGG00VI/incrSyn
-  create_project -in_memory -part xc7z010clg400-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint {C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.runs/impl_1/lfsr_wrapper.dcp}
   set_property webtalk.parent_dir {C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.cache/wt} [current_project]
   set_property parent.project_path {C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.xpr} [current_project]
   set_property ip_output_repo {{C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.runs/synth_1/lfsr_wrapper.dcp}}
-  read_xdc {{C:/Users/franc/Personale/GitHub/LinearFeedbackShiftRegister/LFSR/Vivado Xilinx/LFSR/LFSR.srcs/constrs_1/new/constr.xdc}}
-  link_design -top lfsr_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

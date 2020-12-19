@@ -804,7 +804,7 @@ In this step we have to set the clock timing. We try to get a clock frequency of
 	\caption{Design Timing Summary with period clock equal to 2.5 ns}
 \end{figure}
 
-\noindent We can reduce also now the clock period but, in order to have a bit margin of error, we maintain this clock period. Repeating this procedure we arrive at the point that the minimum clock period is 2.1 ns and so the maximum clock frequency achievable is 476 MHz.
+\noindent We can reduce also now the clock period but, in order to have a bit margin of error, we maintain this clock period. Repeating this procedure we arrive at the point that the minimum clock period is 2.2 ns and so the maximum clock frequency achievable is 454 MHz.
 \newpage
 \subsection{I/O Planning}
 The next step is to do the I/O planning: this means that we have to connect our inputs and our outputs to the pins of the board. We can see it in the figure 5.7.
@@ -866,6 +866,45 @@ After the synthesis we can see a schematic of the LFSR mapped on the target tech
 \end{figure}
 
 \section{Implementation}
-Scrivere che anche dopo l'implementazione lo slack è ancora positivo e mostrare il power report e commentarlo. Dire inoltre che le estimated resource sono correte e sono le stess dopo l'implementazione
+With this phase we implement our device on the FPGA board. The previous information are estimated, now, in this phase, we have the real informations about timing, power consumption and resource utilization. So in this section we will compare the actual results with the estimate ones in order to discuss the performance of the implemented LFSR on the ZyBo Board..
+
+\noindent As first step we can see how our functionalities are mapped on the board in the figure 5.13 where the used components are the ones coloured.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.76]{img/vivado/fpga.png}
+	\caption{Image that describes how our device is mapped on theFPGA}
+\end{figure}
+
+\noindent In the figure 5.14 we can see a more detailed view of some of the components used in the FPGA to implement our functionalities.
+
+\noindent The components used are the ones in light grey, we can recognize flip-flops and LUT.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.6]{img/vivado/fpga_detail.png}
+	\caption{Detail of the FPGA board}
+\end{figure}
+
+\subsection{Timing Constraint}
+The time constraint are respected also after the implementation. The slack is positive and so we are sure that our device can work at a frequency of 400 MHz. We can see the timing report after the implementation in the figure 5.15.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.7]{img/vivado/implementation_timing.png}
+	\caption{Timing report after implementation}
+\end{figure}
+
+\noindent If we try to run the implementation with the previously estimated minimum clock period (2.2ns) we have that the timing constraint are met also in this case and so the minimum clock period achievable is 2.2ns (454 MHz) but in any case we will work with the clock period equal to 2.5ns (400 MHz)
+\subsection{Resources Utilization}
+The utilized resources are exactly the ones estimated in the previous phase as we expect. We can see them in the figure 5.16.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.7]{img/vivado/utilization.png}
+	\caption{Resource utilized after implementation}
+\end{figure}
+
+\subsection{Power Consumption}
+
 \chapter{Conclusion}
 \end{document}

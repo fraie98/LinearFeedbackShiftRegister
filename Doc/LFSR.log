@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  20 DEC 2020 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  21 DEC 2020 18:31
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -695,10 +695,10 @@ Chapter 4.
 <img/tb/wave_dff_test.png, id=89, 822.82407pt x 97.11281pt>
 File: img/tb/wave_dff_test.png Graphic file (type png)
 <use img/tb/wave_dff_test.png>
-Package pdftex.def Info: img/tb/wave_dff_test.png  used on input line 439.
+Package pdftex.def Info: img/tb/wave_dff_test.png  used on input line 449.
 (pdftex.def)             Requested size: 423.60219pt x 88.25275pt.
 
-Overfull \hbox (11.0372pt too wide) in paragraph at lines 439--440
+Overfull \hbox (11.0372pt too wide) in paragraph at lines 449--450
  [][] 
  []
 
@@ -709,10 +709,10 @@ Overfull \hbox (11.0372pt too wide) in paragraph at lines 439--440
 File: img/tb/wave_dff_tap_circuit_test.png Graphic file (type png)
 <use img/tb/wave_dff_tap_circuit_test.png>
 Package pdftex.def Info: img/tb/wave_dff_tap_circuit_test.png  used on input li
-ne 475.
+ne 485.
 (pdftex.def)             Requested size: 423.60228pt x 88.25224pt.
 
-Overfull \hbox (11.0373pt too wide) in paragraph at lines 475--476
+Overfull \hbox (11.0373pt too wide) in paragraph at lines 485--486
  [][] 
  []
 
@@ -722,10 +722,10 @@ Overfull \hbox (11.0373pt too wide) in paragraph at lines 475--476
 File: img/tb/wave_lfsr_as_shift_reg_test_bin.png Graphic file (type png)
 <use img/tb/wave_lfsr_as_shift_reg_test_bin.png>
 Package pdftex.def Info: img/tb/wave_lfsr_as_shift_reg_test_bin.png  used on in
-put line 513.
+put line 523.
 (pdftex.def)             Requested size: 423.61105pt x 70.60588pt.
 
-Overfull \hbox (11.04607pt too wide) in paragraph at lines 513--514
+Overfull \hbox (11.04607pt too wide) in paragraph at lines 523--524
  [][] 
  []
 
@@ -733,17 +733,17 @@ Overfull \hbox (11.04607pt too wide) in paragraph at lines 513--514
 File: img/tb/wave_lfsr_as_shift_reg_test_hex.png Graphic file (type png)
 <use img/tb/wave_lfsr_as_shift_reg_test_hex.png>
 Package pdftex.def Info: img/tb/wave_lfsr_as_shift_reg_test_hex.png  used on in
-put line 521.
+put line 531.
 (pdftex.def)             Requested size: 423.59439pt x 70.60733pt.
 
-Overfull \hbox (11.0294pt too wide) in paragraph at lines 521--522
+Overfull \hbox (11.0294pt too wide) in paragraph at lines 531--532
  [][] 
  []
 
 [14 <./img/tb/wave_lfsr_as_shift_reg_test_bin.png> <./img/tb/wave_lfsr_as_shift
 _reg_test_hex.png>] [15]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-17.
+30.
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -754,10 +754,10 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 <img/tb/wave_lfsr_test2.png, id=110, 1415.2875pt x 117.43875pt>
 File: img/tb/wave_lfsr_test2.png Graphic file (type png)
 <use img/tb/wave_lfsr_test2.png>
-Package pdftex.def Info: img/tb/wave_lfsr_test2.png  used on input line 656.
+Package pdftex.def Info: img/tb/wave_lfsr_test2.png  used on input line 669.
 (pdftex.def)             Requested size: 451.82149pt x 63.53781pt.
 
-Overfull \hbox (39.2565pt too wide) in paragraph at lines 656--657
+Overfull \hbox (39.2565pt too wide) in paragraph at lines 669--670
  [][] 
  []
 
@@ -765,11 +765,10 @@ Overfull \hbox (39.2565pt too wide) in paragraph at lines 656--657
 <img/tb/linuxConsoleExecution.png, id=115, 1026.83624pt x 401.5pt>
 File: img/tb/linuxConsoleExecution.png Graphic file (type png)
 <use img/tb/linuxConsoleExecution.png>
-Package pdftex.def Info: img/tb/linuxConsoleExecution.png  used on input line 6
-89.
+Package pdftex.def Info: img/tb/linuxConsoleExecution.png  used on input line 7
+02.
 (pdftex.def)             Requested size: 410.72722pt x 160.59715pt.
- [17 <./img/tb/wave_lfsr_test2.png> <./img/tb/linuxConsoleExecution.png>]
-[18]
+ [17 <./img/tb/wave_lfsr_test2.png>] [18 <./img/tb/linuxConsoleExecution.png>]
 Chapter 5.
 [19
 
@@ -778,10 +777,10 @@ Chapter 5.
 File: img/tb/wave_lfsr_wrapper_test.png Graphic file (type png)
 <use img/tb/wave_lfsr_wrapper_test.png>
 Package pdftex.def Info: img/tb/wave_lfsr_wrapper_test.png  used on input line 
-756.
+769.
 (pdftex.def)             Requested size: 451.83699pt x 63.53737pt.
 
-Overfull \hbox (39.272pt too wide) in paragraph at lines 756--757
+Overfull \hbox (39.272pt too wide) in paragraph at lines 769--770
  [][] 
  []
 
@@ -789,10 +788,10 @@ Overfull \hbox (39.272pt too wide) in paragraph at lines 756--757
 File: img/vivado/rtl_analysis_schematic.PNG Graphic file (type png)
 <use img/vivado/rtl_analysis_schematic.PNG>
 Package pdftex.def Info: img/vivado/rtl_analysis_schematic.PNG  used on input l
-ine 768.
+ine 781.
 (pdftex.def)             Requested size: 436.63017pt x 184.815pt.
 
-Overfull \hbox (24.06519pt too wide) in paragraph at lines 768--769
+Overfull \hbox (24.06519pt too wide) in paragraph at lines 781--782
  [][] 
  []
 
@@ -800,7 +799,7 @@ Overfull \hbox (24.06519pt too wide) in paragraph at lines 768--769
 File: img/vivado/detail_of_rtl_analysis.png Graphic file (type png)
 <use img/vivado/detail_of_rtl_analysis.png>
 Package pdftex.def Info: img/vivado/detail_of_rtl_analysis.png  used on input l
-ine 776.
+ine 789.
 (pdftex.def)             Requested size: 354.12057pt x 129.10645pt.
 [20 <./img/tb/wave_lfsr_wrapper_test.png> <./img/vivado/rtl_analysis_schematic.
 PNG>]
@@ -809,27 +808,27 @@ PNG>]
 File: img/vivado/detail_of_detail_of_rtl_analysis.png Graphic file (type png)
 <use img/vivado/detail_of_detail_of_rtl_analysis.png>
 Package pdftex.def Info: img/vivado/detail_of_detail_of_rtl_analysis.png  used 
-on input line 786.
+on input line 799.
 (pdftex.def)             Requested size: 441.37532pt x 135.80777pt.
 
-Overfull \hbox (28.81033pt too wide) in paragraph at lines 786--787
+Overfull \hbox (28.81033pt too wide) in paragraph at lines 799--800
  [][] 
  []
 
 <img/vivado/timing_summary1.png, id=137, 649.67719pt x 142.28156pt>
 File: img/vivado/timing_summary1.png Graphic file (type png)
 <use img/vivado/timing_summary1.png>
-Package pdftex.def Info: img/vivado/timing_summary1.png  used on input line 796
+Package pdftex.def Info: img/vivado/timing_summary1.png  used on input line 809
 .
 (pdftex.def)             Requested size: 389.80931pt x 85.36958pt.
 <img/vivado/timing_summary3.png, id=138, 648.92438pt x 110.66344pt>
 File: img/vivado/timing_summary3.png Graphic file (type png)
 <use img/vivado/timing_summary3.png>
-Package pdftex.def Info: img/vivado/timing_summary3.png  used on input line 805
+Package pdftex.def Info: img/vivado/timing_summary3.png  used on input line 818
 .
 (pdftex.def)             Requested size: 454.24397pt x 77.46385pt.
 
-Overfull \hbox (41.67899pt too wide) in paragraph at lines 805--806
+Overfull \hbox (41.67899pt too wide) in paragraph at lines 818--819
  [][] 
  []
 
@@ -838,10 +837,10 @@ _rtl_analysis.png> <./img/vivado/timing_summary1.png>]
 <img/vivado/ioplanning.png, id=145, 1123.94907pt x 382.42876pt>
 File: img/vivado/ioplanning.png Graphic file (type png)
 <use img/vivado/ioplanning.png>
-Package pdftex.def Info: img/vivado/ioplanning.png  used on input line 815.
+Package pdftex.def Info: img/vivado/ioplanning.png  used on input line 828.
 (pdftex.def)             Requested size: 449.57167pt x 152.96878pt.
 
-Overfull \hbox (37.00668pt too wide) in paragraph at lines 815--816
+Overfull \hbox (37.00668pt too wide) in paragraph at lines 828--829
  [][] 
  []
 
@@ -849,7 +848,7 @@ Overfull \hbox (37.00668pt too wide) in paragraph at lines 815--816
 File: img/vivado/warnings_synthesis.png Graphic file (type png)
 <use img/vivado/warnings_synthesis.png>
 Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
-826.
+839.
 (pdftex.def)             Requested size: 366.541pt x 44.03911pt.
 [22 <./img/vivado/timing_summary3.png> <./img/vivado/ioplanning.png> <./img/viv
 ado/warnings_synthesis.png>]
@@ -857,19 +856,19 @@ ado/warnings_synthesis.png>]
 File: img/vivado/estimated_utilization1.png Graphic file (type png)
 <use img/vivado/estimated_utilization1.png>
 Package pdftex.def Info: img/vivado/estimated_utilization1.png  used on input l
-ine 839.
+ine 852.
 (pdftex.def)             Requested size: 365.86348pt x 101.62872pt.
 <img/vivado/estimated_utilization2.png, id=154, 405.76593pt x 101.62968pt>
 File: img/vivado/estimated_utilization2.png Graphic file (type png)
 <use img/vivado/estimated_utilization2.png>
 Package pdftex.def Info: img/vivado/estimated_utilization2.png  used on input l
-ine 848.
+ine 861.
 (pdftex.def)             Requested size: 365.18596pt x 91.46585pt.
 <img/vivado/schematic_after_synthesis.png, id=155, 462.97969pt x 278.54062pt>
 File: img/vivado/schematic_after_synthesis.png Graphic file (type png)
 <use img/vivado/schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/schematic_after_synthesis.png  used on inpu
-t line 861.
+t line 874.
 (pdftex.def)             Requested size: 370.38425pt x 222.8328pt.
 <img/vivado/detail_of_schematic_after_synthesis.png, id=156, 737.00343pt x 322.
 20375pt>
@@ -877,10 +876,10 @@ File: img/vivado/detail_of_schematic_after_synthesis.png Graphic file (type png
 )
 <use img/vivado/detail_of_schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/detail_of_schematic_after_synthesis.png  us
-ed on input line 866.
+ed on input line 879.
 (pdftex.def)             Requested size: 442.20547pt x 193.32373pt.
 
-Overfull \hbox (29.64049pt too wide) in paragraph at lines 866--867
+Overfull \hbox (29.64049pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
@@ -889,12 +888,12 @@ on2.png> <./img/vivado/schematic_after_synthesis.png>]
 <img/vivado/fpga.png, id=163, 254.45062pt x 385.44pt>
 File: img/vivado/fpga.png Graphic file (type png)
 <use img/vivado/fpga.png>
-Package pdftex.def Info: img/vivado/fpga.png  used on input line 877.
+Package pdftex.def Info: img/vivado/fpga.png  used on input line 890.
 (pdftex.def)             Requested size: 193.38058pt x 292.93156pt.
 <img/vivado/fpga_detail.png, id=164, 627.84563pt x 380.92313pt>
 File: img/vivado/fpga_detail.png Graphic file (type png)
 <use img/vivado/fpga_detail.png>
-Package pdftex.def Info: img/vivado/fpga_detail.png  used on input line 887.
+Package pdftex.def Info: img/vivado/fpga_detail.png  used on input line 900.
 (pdftex.def)             Requested size: 376.71028pt x 228.55562pt.
  [24 <./img/vivado/detail_of_schematic_after_synthesis.png> <./img/vivado/fpga.
 png>]
@@ -902,25 +901,25 @@ png>]
 File: img/vivado/implementation_timing.png Graphic file (type png)
 <use img/vivado/implementation_timing.png>
 Package pdftex.def Info: img/vivado/implementation_timing.png  used on input li
-ne 896.
+ne 909.
 (pdftex.def)             Requested size: 457.40576pt x 83.26048pt.
 
-Overfull \hbox (44.84077pt too wide) in paragraph at lines 896--897
+Overfull \hbox (44.84077pt too wide) in paragraph at lines 909--910
  [][] 
  []
 
 <img/vivado/utilization.png, id=172, 427.5975pt x 145.29282pt>
 File: img/vivado/utilization.png Graphic file (type png)
 <use img/vivado/utilization.png>
-Package pdftex.def Info: img/vivado/utilization.png  used on input line 905.
+Package pdftex.def Info: img/vivado/utilization.png  used on input line 918.
 (pdftex.def)             Requested size: 299.31621pt x 101.70427pt.
 <img/vivado/power.png, id=173, 505.13719pt x 233.37187pt>
 File: img/vivado/power.png Graphic file (type png)
 <use img/vivado/power.png>
-Package pdftex.def Info: img/vivado/power.png  used on input line 913.
+Package pdftex.def Info: img/vivado/power.png  used on input line 926.
 (pdftex.def)             Requested size: 429.36864pt x 198.36702pt.
 
-Overfull \hbox (16.80365pt too wide) in paragraph at lines 913--914
+Overfull \hbox (16.80365pt too wide) in paragraph at lines 926--927
  [][] 
  []
 
@@ -933,11 +932,11 @@ Chapter 6.
 Here is how much of TeX's memory you used:
  17298 strings out of 479832
  333567 string characters out of 2871058
- 1076458 words of memory out of 3000000
+ 1124458 words of memory out of 3000000
  33944 multiletter control sequences out of 15000+200000
  551981 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,8n,96p,974b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 85i,8n,96p,974b,1620s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ectt1000.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\tcrm0800.pk> <C:\Users\franc\AppData\Local\MiKTeX\fonts/pk/ljfour
@@ -968,9 +967,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (28 pages, 935479 bytes).
+Output written on LFSR.pdf (28 pages, 940305 bytes).
 PDF statistics:
- 776 PDF objects out of 1000 (max. 8388607)
+ 783 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

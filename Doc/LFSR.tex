@@ -156,7 +156,7 @@ The Galois LFSR is an alternative architecture for LFSR, from the point of view 
 	\item $b_{j+1} = XOR(b'_{N-1} , b_j)$ with $j \in T$ , $0\le j < N-1$
 	\item $output = b'_{N-1}$
 \end{itemize}
-\subsection{Comparison}
+\subsection{Comparison and Critical Path}
 The Galois architecture has a big advantage with respect to Fibonacci one. In fact in the latter there is a chain of XOR gates and the XOR operations must be done in serial and it cannot be done in parallel. Furthermore, the propagation time of this chain is not negligible. On the other hand, in the Galois implementation, the XOR operations can be done in parallel and the propagation time regard a single gate (not a chain as in the Fibonacci's case). So the propagation time of Galois implementation is lesser than the Fibonacci one, this means that with this architecture we can achieve a faster clock frequency.
 In our case we have four taps, so if we assume that we have only XOR gates with two inputs and each one has a $t_{propagation_{i}} = x$ we are in the following situation:
 	\begin{itemize}
@@ -282,9 +282,10 @@ The basic device needed for the LFSR is a D Flip-Flop wit Set/Reset.
 	
 	architecture rtl of dff is
 	begin
-		dff_p:process(reset,clk)
-		begin
-			if reset='0' then
+		dff_p:process(reset,clk,set)
+	begin
+			--if reset='0' then 	-- Standard Reset Polarity 
+			if reset='1' then  		-- ZyBo Board Reset Polarity
 				q <= set;
 			elsif(rising_edge(clk)) then
 				q <= d;
@@ -292,7 +293,7 @@ The basic device needed for the LFSR is a D Flip-Flop wit Set/Reset.
 		end process;
 	end rtl;
 \end{lstlisting}
-The behaviour of this device is very simple, at the initialization phase (when reset is 0) the output is initialized with the set value. Then in the normal case the output follow the input and it is update at each rising edge of the clock.
+The behaviour of this device is very simple, at the initialization phase (when reset is 0 if we consider the standard reset polarity) the output is initialized with the set value. Then in the normal case the output follow the input and it is update at each rising edge of the clock.
 An important note is that the reset polarity will be changed afterwards for synthesis reasons that will be explained afterwards in chapter 5.
 
 \section{D Flip-Flop with Set/Reset and Tap Circuit}
@@ -306,11 +307,13 @@ The memory cell which maintains a bit within the LFSR is the D-Flip-Flop with Se
 		port(
 			clk				:	in 	std_logic;
 			reset 		:	in 	std_logic;
-			set				:	in 	std_logic;  -- initialization input
+			set				:	in 	std_logic;  -- initialization input (necessary for seed
+																	-- initialization)
 			d_in			:	in 	std_logic;	
 			isTap			:	in 	std_logic;	-- it indicates if the input must be changed
 																	-- (it does if the previous ff is a tap)
-			feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1)
+			feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1 bit of 
+																	-- the LFSR)
 			q_out			:	out std_logic
 		);
 	end dff_tap_circuit;
@@ -327,7 +330,8 @@ The memory cell which maintains a bit within the LFSR is the D-Flip-Flop with Se
 		);
 	end component;
 	
-	signal new_d : std_logic;
+	signal new_d : std_logic; -- signal that is the result of the logic (XOR+AND)
+														-- and it is the dff input
 	begin
 		internal_dff : dff
 		port map(
@@ -356,13 +360,14 @@ Now we see the way in which we have to aggregate the previous devices in order t
 	entity lfsr is
 		generic (Nbit : positive := 16);
 		port(
-			clock			:	in 	std_logic;
-			reset			:	in 	std_logic;
-			isTap			:	in 	std_logic_vector(0 to Nbit-2);
-			seed			:	in 	std_logic_vector(0 to Nbit-1);
-			outputBit	:	out std_logic;
-			-- debugging
-			state			:	out std_logic_vector(Nbit-1 downto 0)
+			clock		:	in 	std_logic;
+			reset 		:	in 	std_logic;
+			isTap		: 	in 	std_logic_vector(0 to Nbit-2);
+			seed		:	in 	std_logic_vector(0 to Nbit-1);
+			outputBit	: 	out std_logic;
+			-- Debugging: it's necessary to stop the simulation in ModelSim.
+			-- But can be useful also in normal application.
+			state		: 	out std_logic_vector(Nbit-1 downto 0)
 		);
 	end lfsr;
 	
@@ -371,17 +376,22 @@ Now we see the way in which we have to aggregate the previous devices in order t
 		component dff_tap_circuit is
 			port(
 				clk				:	in 	std_logic;
-				reset			:	in 	std_logic;
-				set				: in 	std_logic; 
+				reset 		:	in 	std_logic;
+				set				: 	in 	std_logic; 	-- initialization input (necessary for
+																			-- seed initialization)
 				d_in			:	in 	std_logic;	
-				isTap			:	in 	std_logic;
-				feedback	:	in 	std_logic;
+				isTap			:	in 	std_logic;	-- it indicates if the input must be changed
+																		-- (it does if the previous ff is a tap)
+				feedback	:	in 	std_logic;  -- it is the feedback bit (the N-1 bit of
+																		-- the LFSR)
 				q_out			:	out std_logic
 			);
 		end component;
 		
-		signal lastBit : std_logic := '0';
-		signal intercon : std_logic_vector(0 to Nbit-2);
+		signal lastBit : std_logic;							-- Last bit of the LFSR, it is the
+																						-- feedback bit and also the output
+		signal intercon : std_logic_vector(0 to Nbit-2);	-- Interconnections among
+																											-- flip-flops
 	begin
 		GEN:for i in 0 to Nbit-1 generate
 			FIRST: 	if i = 0 generate
@@ -539,14 +549,17 @@ Then in terms of bit position the taps are: 10, 12, 13. Because of the fact that
 			isTap_tb <= "000000000010110";
 			seed_tb <= "0000101011000110";
 		elsif (rising_edge(clk_tb)) then
+			-- The first time it's at the beginning and I have to neglect it
 			if actual_state=seed_tb and t=0 then
 				t:=t+1;
-			elsif actual_state=seed_tb and t=1 then
+			-- The second time it's at the end and so I have to stop the sim
+			elsif actual_state=seed_tb and t=1 then	
 				end_sim <='0';
 			end if;
 		end if;
 	end process;
 	
+	-- Process that write the output on a file
 	write_file : process
 	variable BUF : line;
 	begin

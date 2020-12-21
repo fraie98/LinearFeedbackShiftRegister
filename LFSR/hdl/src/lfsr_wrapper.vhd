@@ -14,7 +14,7 @@ end lfsr_wrapper;
 architecture struct of lfsr_wrapper is
 
 signal seed_internal : std_logic_vector(0 to 15);
-signal isTap_internal : std_logic_vector(0 to 14) := "000000000010110";
+signal isTap_internal : std_logic_vector(0 to 14);
 signal state_internal : std_logic_vector(15 downto 0);
 signal out_internal :std_logic;
 signal reset_internal : std_logic;
@@ -32,6 +32,8 @@ component lfsr is
 	end component;
  
 begin
+	isTap_internal <= "000000000010110";
+	
 	LFSR_MAPPING : lfsr
 	port map(
 			seed 		=> seed_internal,

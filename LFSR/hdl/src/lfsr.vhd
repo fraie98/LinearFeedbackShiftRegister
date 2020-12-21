@@ -29,7 +29,7 @@ architecture rtl of lfsr is
 		);
 	end component;
 
-	signal lastBit : std_logic := '0';					-- Last bit of the LFSR, it is the feedback bit and also the output
+	signal lastBit : std_logic;							-- Last bit of the LFSR, it is the feedback bit and also the output
 	signal intercon : std_logic_vector(0 to Nbit-2);	-- Interconnections among flip-flops
 begin
 	GEN:for i in 0 to Nbit-1 generate

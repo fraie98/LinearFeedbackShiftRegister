@@ -54,13 +54,14 @@ begin
 			seed_tb <= "0000";		
 		elsif (rising_edge(clk_tb)) then
 			case(t) is
-				when 65535 => end_sim <= '0';
+				when 65535 => end_sim <= '0';  -- I have to count the cycles and stop here because I cant's see the actual state
 				when others => null;
 			end case ;
 			t:=t+1;
 		end if;
 	end process;
 
+	-- Process that write the output on a file
 	write_file : process
 	variable BUF : line;
 	begin

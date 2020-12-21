@@ -42,10 +42,10 @@ begin
 			state 		=> state_internal
 		);
 
-	seed_internal(0 to 3) <= seed;
-	seed_internal(4 to 15) <= "101011000110";
+	seed_internal(0 to 3) <= seed;				-- Part of the seed changeable from the user
+	seed_internal(4 to 15) <= "101011000110";	-- Pre-fixed value
 
   	yq<= "00000"&out_internal;
 
-  	led_out <= seed;
+  	led_out <= seed;  -- feedback for the user to see which bits of "seed" are 1 and which are 0
 end struct;

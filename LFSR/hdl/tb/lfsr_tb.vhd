@@ -33,7 +33,6 @@ architecture bhv of lfsr_tb is
 			isTap		: 	in 	std_logic_vector(0 to Nbit-2);
 			seed		:	in 	std_logic_vector(0 to Nbit-1);
 			outputBit	: 	out std_logic;
-			-- debugging
 			state		: out std_logic_vector(Nbit-1 downto 0)
 		);
 	end component;
@@ -62,14 +61,15 @@ begin
 			-- seed_tb <= "1100101010100111";		-- TEST 2 - OK
 			-- seed_tb <= "0000000000000110";		-- TEST 3 - OK
 		elsif (rising_edge(clk_tb)) then
-			if actual_state=seed_tb and t=0 then
+			if actual_state=seed_tb and t=0 then	-- The first time it's at the beginning and I have to neglect it
 				t:=t+1;
-			elsif actual_state=seed_tb and t=1 then
+			elsif actual_state=seed_tb and t=1 then -- The second time it's at the end and so I have to stop the sim
 				end_sim <='0';
 			end if;
 		end if;
 	end process;
 
+	-- Process that write the output on a file
 	write_file : process
 	variable BUF : line;
 	begin

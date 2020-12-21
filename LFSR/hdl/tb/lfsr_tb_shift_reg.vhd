@@ -26,8 +26,7 @@ architecture bhv of lfsr_tb_shift_reg is
 			isTap		: 	in 	std_logic_vector(0 to Nbit-2);
 			seed		:	in 	std_logic_vector(0 to Nbit-1);
 			outputBit	: 	out std_logic;
-			-- debugging
-			state		: out std_logic_vector(Nbit-1 downto 0)
+			state		: 	out std_logic_vector(Nbit-1 downto 0)
 		);
 	end component;
 

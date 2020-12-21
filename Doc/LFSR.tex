@@ -822,7 +822,7 @@ In this step we have to set the clock timing. We try to get a clock frequency of
 \noindent We can reduce also now the clock period but, in order to have a bit margin of error (after the implementation the slack will be smaller than this value), we maintain this clock period. In any case, in order to achieve a theoretical limit to the maximum clock frequency, we obtain that, repeating this procedure, we arrive at the point that the minimum clock period is 2.2 ns and so the maximum clock frequency achievable is 454 MHz.
 %\newpage
 \subsection{I/O Planning}
-The next step is to do the I/O planning: this means that we have to connect our inputs and our outputs to the pins of the board. We can see it in the figure 5.7.
+The next step is to do the I/O planning. We can see it in the figure 5.7.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[scale=0.4]{img/vivado/ioplanning.png}
@@ -836,13 +836,14 @@ At the end of the synthesis we have 11 warning messages. We can see them in the 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[scale=0.9]{img/vivado/warnings_synthesis.png}
+	\includegraphics[scale=0.8]{img/vivado/warnings_synthesis.png}
 	\caption{Warning messages after synthesis}
 \end{figure}
 
-\noindent The warning messages can be easily explained: they are related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output and if we want to use the VGA then the other bits must be setted manually to 0, because only the LSB of \emph{yq} is the real output.
+\noindent The first group of warning messages are related to the fact that we connect part of the output to the constant 0. But this is what we want, because we have only a bit as output (only the LSB of \emph{yq} is the real output) and if we want to use the VGA then then other bits must be setted manually to 0. The second warning message is a well-know Vivado issue\footnote{ For more see: \emph{https://forums.xilinx.com/t5/Synthesis/Vivado-warning-Constraints-18-5210/td-p/943869} and \emph{https://www.xilinx.com/support/answers/73510.html}}
+that has been removed in last releases. The problem is related to the file .xdc (the constraint file) that Vivado, apparently, doesn't see, but, indeed, it considers because otherwise without clock and I/O planning no implementation is possible, so this warning must be ignored. 
 
-\newpage
+%\newpage
 
 \subsection{Estimated Resources Utilization}
 The estimated resources utilized are shown in the figure 5.9 and 5.10.
@@ -941,5 +942,5 @@ The LFSR can be initialized with $2^4$ possible values due to the limitations pl
 
 \noindent About the power consumption, the device has a power equal to 0,12 W but onyly 0.027 W are due to the LFSR implementation. The utilized resource are very low and they reach a great value only for the I/O resources.
 
-\noindent The ZyBo board, with this implemented LFSR, can be used for the application seen in the section 1.3, from the Cryptography to Communications and so on.
+\noindent The ZyBo board, with this implemented LFSR, can be used for the application seen in the section 1.3, from the Cryptography to Communications and so on.
 \end{document}

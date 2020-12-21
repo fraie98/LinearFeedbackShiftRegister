@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  21 DEC 2020 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.9)  21 DEC 2020 19:13
 entering extended mode
 **./LFSR.tex
 (LFSR.tex
@@ -849,26 +849,26 @@ File: img/vivado/warnings_synthesis.png Graphic file (type png)
 <use img/vivado/warnings_synthesis.png>
 Package pdftex.def Info: img/vivado/warnings_synthesis.png  used on input line 
 839.
-(pdftex.def)             Requested size: 366.541pt x 44.03911pt.
-[22 <./img/vivado/timing_summary3.png> <./img/vivado/ioplanning.png> <./img/viv
-ado/warnings_synthesis.png>]
-<img/vivado/estimated_utilization1.png, id=153, 406.51875pt x 112.92188pt>
+(pdftex.def)             Requested size: 325.81767pt x 39.14629pt.
+<img/vivado/estimated_utilization1.png, id=147, 406.51875pt x 112.92188pt>
 File: img/vivado/estimated_utilization1.png Graphic file (type png)
 <use img/vivado/estimated_utilization1.png>
 Package pdftex.def Info: img/vivado/estimated_utilization1.png  used on input l
-ine 852.
+ine 853.
 (pdftex.def)             Requested size: 365.86348pt x 101.62872pt.
+[22 <./img/vivado/timing_summary3.png> <./img/vivado/ioplanning.png> <./img/viv
+ado/warnings_synthesis.png>]
 <img/vivado/estimated_utilization2.png, id=154, 405.76593pt x 101.62968pt>
 File: img/vivado/estimated_utilization2.png Graphic file (type png)
 <use img/vivado/estimated_utilization2.png>
 Package pdftex.def Info: img/vivado/estimated_utilization2.png  used on input l
-ine 861.
+ine 862.
 (pdftex.def)             Requested size: 365.18596pt x 91.46585pt.
 <img/vivado/schematic_after_synthesis.png, id=155, 462.97969pt x 278.54062pt>
 File: img/vivado/schematic_after_synthesis.png Graphic file (type png)
 <use img/vivado/schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/schematic_after_synthesis.png  used on inpu
-t line 874.
+t line 875.
 (pdftex.def)             Requested size: 370.38425pt x 222.8328pt.
 <img/vivado/detail_of_schematic_after_synthesis.png, id=156, 737.00343pt x 322.
 20375pt>
@@ -876,10 +876,10 @@ File: img/vivado/detail_of_schematic_after_synthesis.png Graphic file (type png
 )
 <use img/vivado/detail_of_schematic_after_synthesis.png>
 Package pdftex.def Info: img/vivado/detail_of_schematic_after_synthesis.png  us
-ed on input line 879.
+ed on input line 880.
 (pdftex.def)             Requested size: 442.20547pt x 193.32373pt.
 
-Overfull \hbox (29.64049pt too wide) in paragraph at lines 879--880
+Overfull \hbox (29.64049pt too wide) in paragraph at lines 880--881
  [][] 
  []
 
@@ -888,12 +888,12 @@ on2.png> <./img/vivado/schematic_after_synthesis.png>]
 <img/vivado/fpga.png, id=163, 254.45062pt x 385.44pt>
 File: img/vivado/fpga.png Graphic file (type png)
 <use img/vivado/fpga.png>
-Package pdftex.def Info: img/vivado/fpga.png  used on input line 890.
+Package pdftex.def Info: img/vivado/fpga.png  used on input line 891.
 (pdftex.def)             Requested size: 193.38058pt x 292.93156pt.
 <img/vivado/fpga_detail.png, id=164, 627.84563pt x 380.92313pt>
 File: img/vivado/fpga_detail.png Graphic file (type png)
 <use img/vivado/fpga_detail.png>
-Package pdftex.def Info: img/vivado/fpga_detail.png  used on input line 900.
+Package pdftex.def Info: img/vivado/fpga_detail.png  used on input line 901.
 (pdftex.def)             Requested size: 376.71028pt x 228.55562pt.
  [24 <./img/vivado/detail_of_schematic_after_synthesis.png> <./img/vivado/fpga.
 png>]
@@ -901,25 +901,25 @@ png>]
 File: img/vivado/implementation_timing.png Graphic file (type png)
 <use img/vivado/implementation_timing.png>
 Package pdftex.def Info: img/vivado/implementation_timing.png  used on input li
-ne 909.
+ne 910.
 (pdftex.def)             Requested size: 457.40576pt x 83.26048pt.
 
-Overfull \hbox (44.84077pt too wide) in paragraph at lines 909--910
+Overfull \hbox (44.84077pt too wide) in paragraph at lines 910--911
  [][] 
  []
 
 <img/vivado/utilization.png, id=172, 427.5975pt x 145.29282pt>
 File: img/vivado/utilization.png Graphic file (type png)
 <use img/vivado/utilization.png>
-Package pdftex.def Info: img/vivado/utilization.png  used on input line 918.
+Package pdftex.def Info: img/vivado/utilization.png  used on input line 919.
 (pdftex.def)             Requested size: 299.31621pt x 101.70427pt.
 <img/vivado/power.png, id=173, 505.13719pt x 233.37187pt>
 File: img/vivado/power.png Graphic file (type png)
 <use img/vivado/power.png>
-Package pdftex.def Info: img/vivado/power.png  used on input line 926.
+Package pdftex.def Info: img/vivado/power.png  used on input line 927.
 (pdftex.def)             Requested size: 429.36864pt x 198.36702pt.
 
-Overfull \hbox (16.80365pt too wide) in paragraph at lines 926--927
+Overfull \hbox (16.80365pt too wide) in paragraph at lines 927--928
  [][] 
  []
 
@@ -967,9 +967,9 @@ s/cm/cmr5.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on LFSR.pdf (28 pages, 940305 bytes).
+Output written on LFSR.pdf (28 pages, 943717 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
+ 792 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

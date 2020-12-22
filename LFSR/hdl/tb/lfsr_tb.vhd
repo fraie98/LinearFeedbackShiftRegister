@@ -69,7 +69,7 @@ begin
 		end if;
 	end process;
 
-	-- Process that write the output on a file
+	-- Process that writes the output on a file
 	write_file : process
 	variable BUF : line;
 	begin

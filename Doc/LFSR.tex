@@ -701,7 +701,9 @@ In the figure 4.6 we can see the output of the last steps in Linux console.
 	\includegraphics[scale=0.4]{img/tb/linuxConsoleExecution.png}
 	\caption{Execution of the scripts in Linux console}
 \end{figure}
-\newpage
+
+\noindent \textbf{Important note:} If the simulation is performed in a Windows environment and the comparison in Linux, then the comparison fails because of the different way in which Linux and Windows handles the new line character: one uses LF (Linux) and the other one CR+LF (Windows) and so the two files are different due to this. So the solution is to use some tools that convert the files from one format to another one (for instance Github does this) or to perform all the operations on a specific Operative System (remembering that scripts and \emph{diff} don't work on Windows).
+
 \subsection{LFSR Test Conclusion}
 For a complete test plan we have to test all the $2^{16}-1$ (Remember that the state with all 0 is not allowed) possible seeds and so we have to do $65535$ tests and comparisons. Only in this way we can be sure, without doubts, that the LFSR works properly. Anyway we do only some tests and we can say with a reasonable confidence that the LFSR works in a proper way.
 
@@ -940,7 +942,7 @@ The LFSR can be initialized with $2^4$ possible values due to the limitations pl
 
 \noindent From the viewpoint of the performance, the device implemented on the ZyBo works with a clock frequency equal to 400 MHz but in theory the maximum clock frequency is 454 MHz.
 
-\noindent About the power consumption, the device has a power equal to 0,12 W but onyly 0.027 W are due to the LFSR implementation. The utilized resource are very low and they reach a great value only for the I/O resources.
+\noindent About the power consumption, the device has a power equal to 0,12 W but only 0.027 W are due to the LFSR implementation. The utilized resources are very low and they reach a great value only for the I/O resources.
 
 \noindent It's important to point out that the VHDL implementation is done using a generic number N. Thus, theoretically, the VHDL code can implement a Linear Feedback Shift Register of any length and with any feedback polynomial.
 
